@@ -5,8 +5,12 @@ categories:
 countries:
   - us
 tags:
+<<<<<<< HEAD
   - delivery
   - subscription
+=======
+  - delivery, subscription
+>>>>>>> milkrun
 description: >-
   Shop for and subscribe to deliveries from our hub of local farmers, butchers, bakers, and makers in Portland, Oregon.
 image: null
