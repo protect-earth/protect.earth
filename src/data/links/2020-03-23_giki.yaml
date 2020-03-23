@@ -4,7 +4,11 @@ categories:
   - food
   - carbon-reduction
 tags:
+<<<<<<< HEAD
   - reduce
+=======
+  - carbon-reduction
+>>>>>>> giki
 countries:
   - gb
 description: >-
