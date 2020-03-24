@@ -1,4 +1,5 @@
 const path = require(`path`);
+const fs = require('fs');
 const { createFilePath } = require(`gatsby-source-filesystem`);
 const titleCase = require('title-case').titleCase;
 
@@ -74,6 +75,10 @@ exports.createPages = async ({ graphql, actions }) => {
   `);
 
   const allLinks = allLinksQuery.data.allLinksYaml.nodes;
+
+  // HACK to get JSON out to awesome-earth repo
+  // We'll get a proper API up for Protect Earth soon.
+  fs.writeFileSync('./public/links.json', JSON.stringify(allLinks));
 
   await asyncForEach(result.data.allMarkdownRemark.edges, async ({ node }) => {
     const {
