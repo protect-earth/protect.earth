@@ -14,3 +14,9 @@ preferences:
         - date
         - title
         - slug
+    actions:
+      columns:
+        - date
+        - title
+        - url
+        - categories
