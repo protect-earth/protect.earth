@@ -1,7 +1,7 @@
 ---
 title: 'Carbon Reduction'
 image: ../images/carbon-reduction.jpg
-intro: Scientists need our help! Figure out your footprint with some of these calculators.
+intro: Scientists need our help! They're figuring out magic carbon vacuums but they still need us to reduce our footprints.
 ---
 
 Air pollution kills millions of people around the world every year. According to the World Health Organization (WHO), 91 per cent of us breathe air that is unsafe and it’s the cause of 36 per cent of deaths from lung cancer, 34 per cent from stroke and 27 per cent from heart disease. Exposure to small particulates which bypass the body’s defences, penetrating deep into the respiratory system, is often to blame.

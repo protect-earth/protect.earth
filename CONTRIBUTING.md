@@ -1,17 +1,7 @@
 # Contributing Guidelines
 
-To submit a link to this list, please do the following:
+This is a GatsbyJS site, on top of Netlify CMS for now, and powered by YAML files.
 
-1.  Find a link you consider to be awesome.
-2.  Find the appropriate category for your package.
-3.  Make sure to put your package in the alphabetical order.
+Swing by `src/data/links/` to see all the links, and if you'd like to add a new one just copy and paste one of the older ones and update it.
 
-Submit your link in the specific form:
-
-```gfm
-- [Title of the link]() - A short description of what the link is about and why it is awesome.
-```
-
-Failure to comply to these contributing guidelines will result in your pull request being rejected.
-
-Thank you for your suggestions!
+[Spectral](https://github.com/stoplightio/spectral) will help you make sure the YAML is right, either run it on the CLI, via the VS Code extension, or let the GitHub Action let you know how it did.
