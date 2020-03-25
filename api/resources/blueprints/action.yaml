@@ -66,8 +66,8 @@ sections:
           display: Image
           container: actions
           folder: actions
-  new_section:
-    display: 'Tags / Countries'
+  countries:
+    display: Countries
     fields:
       -
         handle: countries
@@ -326,3 +326,24 @@ sections:
           localizable: false
           listable: hidden
           display: Countries
+  social_media:
+    display: 'Social Media'
+    fields:
+      -
+        handle: twitter
+        field:
+          input_type: text
+          type: text
+          instructions: 'Twitter handle without the @'
+          localizable: false
+          listable: hidden
+          display: Twitter
+      -
+        handle: instagram
+        field:
+          input_type: text
+          type: text
+          instructions: 'Instagram handle without @'
+          localizable: false
+          listable: hidden
+          display: Instagram
