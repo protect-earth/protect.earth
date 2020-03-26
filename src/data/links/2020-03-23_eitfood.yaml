@@ -1,6 +1,6 @@
 title: EIT Food
 url: 'https://www.eitfood.eu/'
-tags:
+categories:
   - food
 countries:
   - al
@@ -45,8 +45,7 @@ countries:
   - nl
   - tr
   - ua
-categories:
-  - research, developers, tech, software, accellerator, data
+tags: [research, developers, tech, software, accellerator, data]
 description: >-
   EIT Food is Europe’s leading food innovation initiative, working to make the food system more sustainable, healthy and trusted by consumers.
 image: null
