@@ -1,7 +1,7 @@
 ---
 title: Politics
 intro: 'Demanding action from those in power to scale climate action beyond your own personal choices.'
-image: categories/politics.jpg
+image: categories/politics-1585315068.jpg
 body: |
   Climate action should not be partisan, as if your interests are in economic growth, job opportunities, [personal good health](https://www.theinvadingsea.com/2018/03/01/if-you-live-in-florida-doctors-say-climate-change-is-already-affecting-your-health/), avoiding the [disproportionate impacts to those living in poverty](https://www.theguardian.com/environment/2014/mar/31/climate-change-poor-suffer-most-un-report), [home values](https://www.theinvadingsea.com/2018/04/30/the-risk-of-sea-level-rise-is-chipping-away-at-miami-home-values-new-research-shows/), everyone should care.
   
@@ -44,6 +44,6 @@ body: |
   
   Use the links in this section as a basis for demanding action. If they won't commit to fast, effective and immediate action to resolve the climate crisis, we will [sue the government](https://www.ourchildrenstrust.org/). It [worked in The Netherlands](https://www.theguardian.com/environment/2018/oct/09/dutch-appeals-court-upholds-landmark-climate-change-ruling), and legal action is underway in various stages with governments all around the world!
 updated_by: d2e48869-19c6-464f-86b8-dbe8bc98ac04
-updated_at: 1585143530
+updated_at: 1585315076
 id: 3d78ba9a-4f85-464b-a330-1cfb5c137328
 ---
