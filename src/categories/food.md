@@ -1,6 +1,6 @@
 ---
 title: 'Food'
-image: ../images/sustainable-lifestyle.jpg
+image: ../images/food.jpg
 intro: Small changes to our diets can collectively benefit the environment, by reducing deforestation and limiting how many farty cows we need guffing the planet up.
 ---
 

@@ -3,7 +3,7 @@ url: 'http://overpass-turbo.eu/?template=key&key=zero_waste'
 categories:
   - zero-waste
 tags:
-  - zero-waste
+  - data
 description: >-
   OpenStreetMap has the tag zero_waste=* for shops who sell items without
   packaging.
