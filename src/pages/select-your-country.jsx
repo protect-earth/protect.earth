@@ -67,7 +67,7 @@ export default ({ data }) => {
                         not{' '}
                         <a
                           target="_blank"
-                          href="https://github.com/philsturgeon/awesome-earth/blob/master/CONTRIBUTING.md"
+                          href="https://github.com/protect-earth/protect.earth/blob/master/CONTRIBUTING.md"
                           rel="noopener noreferrer"
                         >
                           contribute something

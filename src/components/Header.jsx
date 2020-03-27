@@ -67,7 +67,7 @@ const Header = ({ dark }) => (
                 ))}
               </DropdownButton>
               <Nav.Link href="/about">About</Nav.Link>
-              <Nav.Link href="https://github.com/philsturgeon/awesome-earth">
+              <Nav.Link href="https://github.com/protect-earth/protect.earth">
                 Contribute
               </Nav.Link>
 
