@@ -1,7 +1,4 @@
 /node_modules
-/public/hot
-/public/storage
-/public/vendor/statamic
 /storage/*.key
 /vendor
 /.idea
