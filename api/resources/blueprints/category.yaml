@@ -1,0 +1,56 @@
+title: Category
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          input_type: text
+          character_limit: 50
+          type: text
+          localizable: false
+          listable: hidden
+          display: Title
+      -
+        handle: slug
+        field:
+          generate: true
+          type: slug
+          localizable: false
+          listable: hidden
+          display: Slug
+          validate: alpha_dash
+      -
+        handle: intro
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: hidden
+          display: Intro
+      -
+        handle: image
+        field:
+          mode: grid
+          restrict: false
+          allow_uploads: true
+          max_files: 1
+          type: assets
+          localizable: false
+          listable: hidden
+          display: Image
+          container: actions
+          folder: categories
+      -
+        handle: body
+        field:
+          restrict: false
+          automatic_line_breaks: true
+          automatic_links: false
+          escape_markup: false
+          smartypants: false
+          type: markdown
+          localizable: false
+          listable: hidden
+          display: Body

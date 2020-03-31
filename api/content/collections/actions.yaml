@@ -1,0 +1,13 @@
+title: Actions
+template: default
+layout: layout
+blueprints:
+  - action
+  - entry_link
+revisions: false
+route: actions
+date: true
+sort_dir: asc
+date_behavior:
+  past: public
+  future: private

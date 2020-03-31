@@ -1,17 +1,9 @@
 # Contributing Guidelines
 
-To submit a link to this list, please do the following:
+This is a GatsbyJS site, on top of Netlify CMS for now, and powered by YAML files.
 
-1.  Find a link you consider to be awesome.
-2.  Find the appropriate category for your package.
-3.  Make sure to put your package in the alphabetical order.
+Swing by `src/data/links/` to see all the links, and if you'd like to add a new one just copy and paste one of the older ones and update it.
 
-Submit your link in the specific form:
+We're working on rewriting this whole thing to Statamic, and that rewrite does an import of the YAML mentioned above, then converts it with `node convert.js`. Check out the `api/` directory for that, and the [Statamic v3 Beta Documentation](https://statamic.dev/).
 
-```gfm
-- [Title of the link]() - A short description of what the link is about and why it is awesome.
-```
-
-Failure to comply to these contributing guidelines will result in your pull request being rejected.
-
-Thank you for your suggestions!
+Things are a tad confusing at the moment, but swing by our issues or @philsturgeon on Twitter. We'll get it cleared up soon.

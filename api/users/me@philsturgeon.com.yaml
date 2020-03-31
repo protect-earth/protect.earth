@@ -1,0 +1,22 @@
+name: 'Phil Sturgeon'
+super: true
+id: d2e48869-19c6-464f-86b8-dbe8bc98ac04
+password_hash: $2y$10$ghhsCSTk0GHSSC0WWtpyyOevZufeDnxH5G86s1ZKTIDORrIl.emiS
+preferences:
+  assets:
+    categories:
+      mode: table
+    assets:
+      mode: table
+  collections:
+    categories:
+      columns:
+        - date
+        - title
+        - slug
+    actions:
+      columns:
+        - date
+        - title
+        - url
+        - categories

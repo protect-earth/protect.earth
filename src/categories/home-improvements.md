@@ -1,7 +1,7 @@
 ---
 title: 'Home Improvements'
 image: ../images/home-improvements.jpg
-intro: Reduce your carbon footprint and save you money on utility costs over time.
+intro: A few investments around the home can save money on utilities and reduce your footprint.
 ---
 
 Standalone and hybrid systems for [heating air and water](https://www.greenbuilt.org/articles/134-solar-heated-water-with-radiant-floor-heat/), even cooling interior spaces can help drastically reduce your carbon footprint and save you money on utility costs over time. Solar thermal water heaters can heat water from the sun anywhere in the world, even the UK, or the Arctic.

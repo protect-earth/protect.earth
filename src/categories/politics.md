@@ -41,6 +41,5 @@ The whole idea of a democracy is that politicians are responsible for enacting t
 - 🇮🇳 **India**
   - [House of the People](http://loksabhaph.nic.in/Members/AlphabeticalList.aspx)
   - [Council of States](https://rajyasabha.nic.in/rsnew/member_site/memberlist.aspx)
-- _Please [add more ways](https://github.com/philsturgeon/awesome-earth/edit/master/src/categories/politics.md) to contact politicians around the world_
 
 Use the links in this section as a basis for demanding action. If they won't commit to fast, effective and immediate action to resolve the climate crisis, we will [sue the government](https://www.ourchildrenstrust.org/). It [worked in The Netherlands](https://www.theguardian.com/environment/2018/oct/09/dutch-appeals-court-upholds-landmark-climate-change-ruling), and legal action is underway in various stages with governments all around the world!
