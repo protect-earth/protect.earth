@@ -1,4 +1,3 @@
-<<<<<<< Updated upstream
 import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import ReactMarkdown from 'react-markdown/with-html';
@@ -10,12 +9,6 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
-=======
-import React from "react"
-import ReactMarkdown from 'react-markdown/with-html'
-import slugify from "slugify"
-import { graphql } from 'gatsby'
->>>>>>> Stashed changes
 
 import { Layout, SocialLinks } from '../components';
 import Countries from '../countries';
