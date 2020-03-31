@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img class="max-h-full max-w-full" alt="Vue logo" src="./assets/hero-bg.jpg">
+    <router-view />
   </div>
 </template>
 
@@ -8,6 +8,11 @@
 
 export default {
   name: 'App',
+
+  metaInfo: {
+    titleTemplate: '%s — Protect Earth',
+  },
+
   components: {
   }
 }
