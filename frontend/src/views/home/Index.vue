@@ -1,16 +1,20 @@
 <template>
   <div>
-    wooooooot
-    <img class="max-h-full max-w-full" alt="Vue logo" src="./../../assets/hero-bg.jpg">
+    <contents />
   </div>
 </template>
 
 <script>
+
   export default {
     name: "HomeIndex",
 
     metaInfo: {
       title: 'Welcome',
+    },
+
+    components: {
+      Contents: () => import('./Contents')
     },
   }
 </script>
