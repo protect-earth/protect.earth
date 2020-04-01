@@ -1,6 +1,12 @@
 <template>
-  <div>
-    <contents/>
+  <div class="text-gray-800 antialiased">
+
+    <home-navigation/>
+
+    <home-main/>
+
+    <home-footer/>
+
   </div>
 </template>
 
@@ -14,7 +20,9 @@
     },
 
     components: {
-      Contents: () => import('./Contents')
+      HomeMain: () => import('./Main'),
+      HomeNavigation: () => import('./Navigation'),
+      HomeFooter: () => import('./Footer'),
     },
 
     data: () => ({
@@ -33,7 +41,7 @@
           .then(r => r.json())
           .then((data) => {
             this.$set(this, 'categories', data)
-          });
+          })
       },
     },
   }
