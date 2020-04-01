@@ -31,10 +31,10 @@ return [
             'fields' => ['title'],
         ],
 
-        // 'blog' => [
-        //     'driver' => 'local',
-        //     'searchables' => 'collection:blog',
-        // ],
+        'actions' => [
+            'driver' => 'algolia',
+            'searchables' => 'collection:actions',
+        ],
 
     ],
 

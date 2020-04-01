@@ -5,6 +5,7 @@
     "type": "project",
     "require": {
         "php": "^7.1.3",
+        "algolia/algoliasearch-client-php": "^2.6",
         "fideloper/proxy": "^4.0",
         "laravel/framework": "^6.2",
         "laravel/tinker": "^1.0",
