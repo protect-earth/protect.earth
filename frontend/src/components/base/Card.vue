@@ -1,5 +1,5 @@
 <template>
-  <div class="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
+  <div class="w-full md:w-4/12 px-4 text-center">
     <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-8 shadow-lg rounded-lg">
       <div class="px-4 py-5 flex-auto">
         <div
@@ -8,12 +8,13 @@
           <i class="fas fa-award"></i></div>
 
         <h6 class="text-xl font-semibold">
-          Commuter
+          <slot name="title"> Title </slot>
         </h6>
 
         <p class="mt-2 mb-4 text-gray-600">
-          Divide details about your product or agency work into parts. A paragraph
-          describing a feature will be enough.
+          <slot name="body">
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+          </slot>
         </p></div>
     </div>
   </div>
