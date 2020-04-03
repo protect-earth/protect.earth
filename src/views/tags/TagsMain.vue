@@ -20,7 +20,7 @@
             <div class="flex flex-wrap justify-center">
               <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                 <div class="relative"><img alt="..."
-                                           src="https://demos.creative-tim.com/tailwindcss-starter-project/static/media/team-2-800x800.dcfcf3b7.jpg"
+                                           :src="`${publicPath}hero-bg.jpg`"
                                            class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
                                            style="max-width: 150px;"></div>
               </div>
