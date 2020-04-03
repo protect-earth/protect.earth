@@ -2,7 +2,7 @@
 
 This website is currently being rewritten, to make it more awesome, and powered by an API so that other sites can pull data from it for their own uses.
 
-The frontend is [Vue.JS](https://vuejs.org/) and the backend is [Statamic v3](https://statamic.dev/rest-api).
+The frontend is [VueJS](https://vuejs.org/) with [TailwindCSS](https://tailwindcss.com/) and the backend is [Statamic v3](https://statamic.dev/rest-api).
 
 ## Frontend Setup
 

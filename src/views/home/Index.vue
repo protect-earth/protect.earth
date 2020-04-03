@@ -1,13 +1,13 @@
 <template>
   <div class="text-gray-800 antialiased">
 
-    <home-navigation/>
+    <navigation />
 
-    <home-main/>
+    <home-main />
 
-    <home-footer/>
+    <page-footer />
 
-    <example-categories :categories="categories" />
+    <example-categories :categories="categories" v-if="false"/>
   </div>
 </template>
 
@@ -22,14 +22,14 @@
 
     components: {
       HomeMain: () => import('./Main'),
-      HomeNavigation: () => import('./Navigation'),
-      HomeFooter: () => import('./Footer'),
+      Navigation: () => import('./../../components/Navigation'),
+      PageFooter: () => import('./../../components/Footer'),
       ExampleCategories: () => import('./ExampleCategories'),
     },
 
     data: () => ({
       baseApiUrl: process.env.VUE_APP_API_BASE_URL,
-      categories: [1,2,3],
+      categories: [],
     }),
 
     created() {
@@ -52,7 +52,3 @@
     },
   }
 </script>
-
-<style scoped>
-
-</style>

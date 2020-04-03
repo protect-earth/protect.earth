@@ -169,6 +169,13 @@
 
         <div class="flex flex-wrap items-center mt-32">
           <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
+            <router-link class="text-lg text-blue-600 pl-6" :to="{ name: `ActionIndex`}"> Actions </router-link>
+            <router-link class="text-lg text-blue-600 pl-6" :to="{ name: `TagIndex`}"> Tags </router-link>
+          </div>
+        </div>
+
+        <div class="flex flex-wrap items-center mt-32">
+          <div class="w-full md:w-5/12 px-4 mr-auto ml-auto">
             <div
               class="text-gray-600 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-gray-100"
             >
@@ -628,5 +635,3 @@ export default {
   })
 };
 </script>
-
-<style scoped></style>

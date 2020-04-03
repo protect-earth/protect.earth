@@ -75,15 +75,15 @@
 </template>
 
 <script>
-  export default {
-    name: 'TagsMain',
+export default {
+    name: 'ActionsMain',
 
-    props: ['tagName'],
+    props: ['actionSlug'],
 
     data() {
-      return {
-        publicPath: process.env.BASE_URL,
-      }
+        return {
+            publicPath: process.env.BASE_URL,
+        }
     },
-  }
+}
 </script>
