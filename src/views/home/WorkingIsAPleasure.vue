@@ -35,7 +35,6 @@
             <img
               alt="..."
               :src="`${baseUrl}img/river-top.jpeg`"
-              srcaaa="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-1.2.1&amp;ixid=eyJhcHBfaWQiOjEyMDd9&amp;auto=format&amp;fit=crop&amp;w=1051&amp;q=80"
               class="w-full align-middle rounded-t-lg"
             />
             <blockquote class="relative p-8 mb-4">
