@@ -25,6 +25,7 @@ const categorySlugIdMap = {
   travel: '97826809-ed97-424c-9c46-cedba824add8',
   volunteering: 'ee42a632-ac6a-4f89-802a-8111cf674d4c',
   'zero-waste': 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
+  waste: 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
 };
 
 fs.readdir(srcLinksFolder, (err, files) => {
