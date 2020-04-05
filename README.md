@@ -22,6 +22,15 @@ npm run serve
 npm run build
 ```
 
+### Environment variables
+
+Make a copy of `.env` file to `.env.local` and make desired changes.
+
+```bash
+cp .env .env.local
+```
+
+
 ## Backend Setup
 
 The API host is pulled from `.env.local` and by default points to `https://api.protect.earth`.

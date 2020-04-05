@@ -6,7 +6,7 @@
     >
       <div
         class="absolute top-0 w-full h-full bg-center bg-cover"
-        :style="`background-image: url(${publicPath}hero-bg.jpg);`"
+        :style="`background-image: url(${baseUrl}hero-bg.jpg);`"
       >
         <span
           id="blackOverlay"
@@ -52,6 +52,7 @@
         </svg>
       </div>
     </div>
+
     <section class="pb-20 bg-gray-300 -mt-24">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap">
@@ -237,6 +238,7 @@
         </div>
       </div>
     </section>
+
     <section class="relative py-20">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -325,6 +327,7 @@
         </div>
       </div>
     </section>
+
     <section class="pt-20 pb-48">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center text-center mb-24">
@@ -485,6 +488,7 @@
         </div>
       </div>
     </section>
+
     <section class="pb-20 relative block bg-gray-900">
       <div
         class="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20"
@@ -560,6 +564,7 @@
         </div>
       </div>
     </section>
+
     <section class="relative block py-24 lg:pt-0 bg-gray-900">
       <div class="container mx-auto px-4">
         <div class="flex flex-wrap justify-center lg:-mt-64 -mt-48">
@@ -623,6 +628,7 @@
         </div>
       </div>
     </section>
+
   </main>
 </template>
 
@@ -630,8 +636,9 @@
 export default {
   name: "HomeMain",
 
+  inject: ['baseUrl'],
+
   data: () => ({
-    publicPath: process.env.BASE_URL
   })
 };
 </script>

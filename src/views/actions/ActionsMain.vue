@@ -2,7 +2,7 @@
   <main class="profile-page">
     <section class="relative block" style="height: 500px;">
       <div class="absolute top-0 w-full h-full bg-center bg-cover"
-           :style="`background-image: url(${publicPath}hero-bg.jpg);`"
+           :style="`background-image: url(${baseUrl}hero-bg.jpg);`"
       >
         <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span></div>
       <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
@@ -20,9 +20,10 @@
             <div class="flex flex-wrap justify-center">
               <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                 <div class="relative"><img alt="..."
-                                           :src="`${publicPath}hero-bg.jpg`"
+                                           :src="`${baseUrl}hero-bg.jpg`"
                                            class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                                           style="max-width: 150px;"></div>
+                                           style="max-width: 150px;">
+                </div>
               </div>
               <div class="w-full lg:w-4/12 px-4 lg:order-3 lg:text-right lg:self-center">
                 <div class="py-6 px-3 mt-32 sm:mt-0">
@@ -75,15 +76,12 @@
 </template>
 
 <script>
-export default {
+  export default {
     name: 'ActionsMain',
 
     props: ['actionSlug'],
 
-    data() {
-        return {
-            publicPath: process.env.BASE_URL,
-        }
-    },
-}
+    inject: ['baseUrl'],
+
+  }
 </script>

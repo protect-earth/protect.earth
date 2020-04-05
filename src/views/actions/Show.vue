@@ -16,7 +16,7 @@
 
     metaInfo() {
       return {
-        title: `Links tagged with ${this.tagSlug}`,
+        title: `Awesome links tagged with ${this.tagSlug}`,
       }
     },
 
@@ -25,10 +25,6 @@
       PageFooter: () => import('./../../components/Footer'),
       ActionsMain: () => import('./ActionsMain'),
     },
-
-    data: () => ({
-      publicPath: process.env.BASE_URL,
-    }),
 
     computed: {
       tagSlug: () => this.$route.params.tagSlug,

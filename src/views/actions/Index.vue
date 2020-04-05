@@ -26,9 +26,5 @@
       PageFooter: () => import('./../../components/Footer'),
     },
 
-    data: () => ({
-      publicPath: process.env.BASE_URL,
-    }),
-
   }
 </script>
