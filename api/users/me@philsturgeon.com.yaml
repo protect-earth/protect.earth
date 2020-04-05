@@ -8,6 +8,8 @@ preferences:
       mode: table
     assets:
       mode: table
+    actions:
+      mode: table
   collections:
     categories:
       columns:
