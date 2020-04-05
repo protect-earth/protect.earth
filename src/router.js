@@ -15,6 +15,12 @@ const router = new Router({
         import(/* webpackChunkName: "Home" */ './views/home/Index'),
     },
     {
+      path: '/storybook-alike',
+      name: 'StorybookAlike',
+      component: () =>
+        import(/* webpackChunkName: "StorybookAlike" */ './views/storybookalike/Index'),
+    },
+    {
       path: '/tags',
       name: 'TagIndex',
       component: () =>

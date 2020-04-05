@@ -32,8 +32,29 @@
             <div class="w-full lg:w-4/12 px-4 ml-auto"><span
               class="block uppercase text-gray-600 text-sm font-semibold mb-2">Useful Links</span>
               <ul class="list-unstyled">
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://www.creative-tim.com/presentation">About Us</a></li>
+                <li>
+                  <router-link
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    :to="{ name: `StorybookAlike`}"
+                  >
+                    StorybookAlike
+                  </router-link>
+                </li>
+                <li>
+                  <router-link
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    :to="{ name: `ActionIndex`}"
+                  >
+                    Actions
+                  </router-link>
+                </li>
+                <li>
+                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                       href="https://www.creative-tim.com/presentation"
+                  >
+                    About Us
+                  </a>
+                </li>
                 <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
                        href="https://blog.creative-tim.com">Blog</a></li>
                 <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
@@ -59,7 +80,9 @@
           </div>
         </div>
       </div>
+
       <hr class="my-6 border-gray-400"/>
+
       <div class="flex flex-wrap items-center md:justify-between justify-center">
         <div class="w-full md:w-4/12 px-4 mx-auto text-center">
           <div class="text-sm text-gray-600 font-semibold py-1"> Copyright © 2019 Tailwind Starter Kit by <a

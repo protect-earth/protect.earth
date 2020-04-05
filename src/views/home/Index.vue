@@ -1,17 +1,39 @@
 <template>
   <div class="text-gray-800 antialiased">
 
-    <navigation />
+    <navigation/>
 
-    <home-main />
+    <main>
 
-    <page-footer />
+      <hero-with-cards/>
+
+      <display-categories/>
+
+      <working-is-a-pleasure/>
+
+      <a-growing-company/>
+
+      <team/>
+
+      <build-something/>
+
+      <work-with-us></work-with-us>
+
+    </main>
+
+    <page-footer/>
 
   </div>
 </template>
 
 <script>
-  import Api from './../../services/api'
+  import HeroWithCards from "./HeroWithCards"
+  import WorkingIsAPleasure from "./WorkingIsAPleasure"
+  import AGrowingCompany from "./AGrowingCompany"
+  import Team from "./Team"
+  import BuildSomething from "./BuildSomething"
+  import WorkWithUs from "./WorkWithUs"
+  import DisplayCategories from "./DisplayCategories"
 
   export default {
 
@@ -22,27 +44,17 @@
     },
 
     components: {
-      HomeMain: () => import('./Main'),
+      DisplayCategories,
+      WorkWithUs,
+      BuildSomething,
+      Team,
+      AGrowingCompany,
+      WorkingIsAPleasure,
+      HeroWithCards,
       Navigation: () => import('./../../components/Navigation'),
       PageFooter: () => import('./../../components/Footer'),
     },
 
     inject: ['baseApiUrl'],
-
-    data: () => ({
-      categories: [],
-    }),
-
-    created() {
-      this.getCategories()
-    },
-
-    methods: {
-      getCategories() {
-        Api.getCategories().then(({data: categories}) => {
-          this.categories = [...categories]
-        })
-      },
-    },
   }
 </script>

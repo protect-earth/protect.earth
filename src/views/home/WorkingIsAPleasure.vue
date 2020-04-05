@@ -27,14 +27,6 @@
             Check Tailwind Starter Kit!
           </a>
 
-          <div class="flex flex-wrap items-center mt-12">
-            <div class="w-full md:w-5/12 px-4 mx-auto">
-              <router-link class="text-lg text-blue-600 pl-6" :to="{ name: `ActionIndex`}"> Actions </router-link>
-              <router-link class="text-lg text-blue-600 pl-6" :to="{ name: `TagIndex`}"> Tags </router-link>
-            </div>
-          </div>
-
-
         </div>
         <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <div
