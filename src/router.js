@@ -15,6 +15,12 @@ const router = new Router({
         import(/* webpackChunkName: "Home" */ './views/home/Index'),
     },
     {
+      path: '/about',
+      name: 'About',
+      component: () =>
+        import(/* webpackChunkName: "About" */ './views/about/Index'),
+    },
+    {
       path: '/storybook-alike',
       name: 'StorybookAlike',
       component: () =>
@@ -43,6 +49,18 @@ const router = new Router({
       name: 'ActionShow',
       component: () =>
         import(/* webpackChunkName: "ActionShow" */ './views/actions/Show'),
+    },
+    {
+      path: '/categories',
+      name: 'CategoryIndex',
+      component: () =>
+        import(/* webpackChunkName: "CategoryIndex" */ './views/categories/Index'),
+    },
+    {
+      path: '/categories/:categorySlug',
+      name: 'CategoryShow',
+      component: () =>
+        import(/* webpackChunkName: "CategoryShow" */ './views/categories/Show'),
     },
   ],
 })

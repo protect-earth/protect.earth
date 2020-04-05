@@ -43,38 +43,57 @@
                 <li>
                   <router-link
                     class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    :to="{ name: `CategoryIndex`}"
+                  >
+                    Categories
+                  </router-link>
+                </li>
+                <li>
+                  <router-link
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    :to="{ name: `TagIndex`}"
+                  >
+                    Tags
+                  </router-link>
+                </li>
+                <li>
+                  <router-link
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
                     :to="{ name: `ActionIndex`}"
                   >
                     Actions
                   </router-link>
                 </li>
                 <li>
-                  <a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://www.creative-tim.com/presentation"
+                  <router-link
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                    :to="{ name: `About`}"
                   >
                     About Us
-                  </a>
+                  </router-link>
                 </li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://blog.creative-tim.com">Blog</a></li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://www.github.com/creativetimofficial">Github</a></li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://www.creative-tim.com/bootstrap-themes/free">Free Products</a></li>
               </ul>
             </div>
+
             <div class="w-full lg:w-4/12 px-4"><span
               class="block uppercase text-gray-600 text-sm font-semibold mb-2">Other Resources</span>
               <ul class="list-unstyled">
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://github.com/creativetimofficial/argon-design-system/blob/master/LICENSE.md">MIT
-                  License</a></li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://creative-tim.com/terms">Terms &amp; Conditions</a></li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://creative-tim.com/privacy">Privacy Policy</a></li>
-                <li><a class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
-                       href="https://creative-tim.com/contact-us">Contact Us</a></li>
+                <li>
+                  <a
+                    href="https://treeware.earth/"
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                  >
+                    Treeware License
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://offset.earth/"
+                    class="text-gray-700 hover:text-gray-900 font-semibold block pb-2 text-sm"
+                  >
+                    Offset Earth
+                  </a>
+                </li>
               </ul>
             </div>
           </div>
@@ -96,9 +115,9 @@
 </template>
 
 <script>
-export default {
-name: "HomeFooter"
-}
+  export default {
+    name: "HomeFooter"
+  }
 </script>
 
 <style scoped>
