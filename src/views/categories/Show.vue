@@ -27,7 +27,9 @@
     },
 
     computed: {
-      categorySlug: () => '' //this.$route.params.categorySlug,
+      categorySlug() {
+        return this.$route !== undefined ? this.$route.params.categorySlug : ''
+      },
     },
   }
 </script>
