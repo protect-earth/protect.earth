@@ -13,6 +13,6 @@ body: |
   
   [Track your footprint](/footprint-calculators) as you set off on your mission to improve your diet, and see the gains you're making each month!
 updated_by: d2e48869-19c6-464f-86b8-dbe8bc98ac04
-updated_at: 1585143460
+updated_at: 1586093848
 id: 1e06ea25-373d-440c-9abd-408710b475d0
 ---

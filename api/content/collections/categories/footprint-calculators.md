@@ -11,6 +11,6 @@ body: |
   
   Once you've got a calculator that works for you, check out our [Carbon Reduction](/carbon-reduction) section to keep trimming it down until you get to 2 tonnes, then 1, then... 0?! Whilst you're sorting out your footprint, help others sort out theirs, and check out our [Politics](/politics) section to scale your personal action to collective action.
 updated_by: d2e48869-19c6-464f-86b8-dbe8bc98ac04
-updated_at: 1585143468
+updated_at: 1586093858
 id: 681bffaf-a44c-4449-ae96-bf780506c862
 ---

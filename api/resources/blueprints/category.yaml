@@ -40,7 +40,7 @@ sections:
           localizable: false
           listable: hidden
           display: Image
-          container: actions
+          container: assets
           folder: categories
       -
         handle: body
