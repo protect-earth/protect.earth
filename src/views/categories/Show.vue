@@ -3,7 +3,7 @@
 
     <navigation />
 
-    <page category="category"/>
+    <category-show-content-page :categorySlug="categorySlug" v-if="isDisplayContent"/>
 
     <page-footer />
 
@@ -23,12 +23,15 @@
     components: {
       Navigation: () => import('./../../components/Navigation'),
       PageFooter: () => import('./../../components/Footer'),
-      Page: () => import('./Page'),
+      CategoryShowContentPage: () => import('./ShowContent'),
     },
 
     computed: {
       categorySlug() {
-        return this.$route !== undefined ? this.$route.params.categorySlug : ''
+        return this.$route !== undefined ? this.$route.params.categorySlug : null
+      },
+      isDisplayContent() {
+        return this.categorySlug !== null
       },
     },
   }

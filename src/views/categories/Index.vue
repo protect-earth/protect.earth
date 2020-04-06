@@ -3,6 +3,9 @@
 
     <navigation/>
 
+    <div>
+      Category Listing will come here.
+    </div>
 
     <page-footer/>
 
@@ -11,7 +14,7 @@
 
 <script>
   export default {
-    name: 'ActionIndex',
+    name: 'CategoryIndex',
 
     metaInfo() {
       return {
