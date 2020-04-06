@@ -29,36 +29,42 @@
       >
         <ul class="flex flex-col lg:flex-row list-none mr-auto">
           <li class="flex items-center">
-            <a
-              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://protect.earth"
-              ><i
-                class="lg:text-gray-300 text-gray-500 far fa-file-alt text-lg leading-lg mr-2"
-              ></i>
-              I am a...
-            </a>
+            <!-- Is used to be links over here -->
           </li>
         </ul>
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="flex items-center">
-            <a
-              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://twitter.com/_protectearth"
-              ><i
-                class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "
-              ></i
-              ><span class="lg:hidden inline-block ml-2">Tweet</span></a
+          <li>
+            <t-dropdown
+              text="I am a..."
+              size="sm"
+              :button-props="{
+                baseClass: `border block rounded inline-flex items-center justify-center`,
+               }"
             >
-          </li>
-          <li class="flex items-center">
-            <a
-              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://github.com/protect-earth"
-              ><i
-                class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "
-              ></i
-              ><span class="lg:hidden inline-block ml-2">Star</span></a
-            >
+
+              <template v-slot:button-content>
+                <span>I am a...</span>
+              </template>
+
+              <ul>
+                <li>
+                  <router-link :to="{ name: 'TagShow', params: { tagSlug: 'commute' }}"
+                               href="#"
+                               class="block no-underline px-4 py-2 hover:bg-pink-600 hover:text-white"
+                  >
+                    Commuter
+                  </router-link>
+                </li>
+                <li>
+                  <router-link :to="{ name: 'TagShow', params: { tagSlug: 'business' }}"
+                               href="#"
+                               class="block no-underline px-4 py-2 hover:bg-pink-600 hover:text-white"
+                  >
+                    Business owner
+                  </router-link>
+                </li>
+              </ul>
+            </t-dropdown>
           </li>
           <li class="flex items-center">
             <router-link
@@ -70,6 +76,26 @@
               <i class="fas fa-arrow-alt-circle-down"></i>
               About
             </router-link>
+          </li>
+          <li class="flex items-center">
+            <a
+              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="https://twitter.com/_protectearth"
+            ><i
+              class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "
+            ></i
+            ><span class="lg:hidden inline-block ml-2">Tweet</span></a
+            >
+          </li>
+          <li class="flex items-center">
+            <a
+              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
+              href="https://github.com/protect-earth"
+            ><i
+              class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "
+            ></i
+            ><span class="lg:hidden inline-block ml-2">Star</span></a
+            >
           </li>
         </ul>
       </div>

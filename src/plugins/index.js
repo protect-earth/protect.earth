@@ -1,4 +1,5 @@
 import Vue from "vue"
+import './vue-tailwind'
 import './baseComponents'
 import './fragment'
 import './meta'
