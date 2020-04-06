@@ -25,7 +25,7 @@
           <img
             alt="..."
             class="max-w-full rounded-lg shadow-lg"
-            :src="`${baseUrl}img/mountain-green.jpeg`"
+            :src="require('./../../assets/mountain-green.jpeg')"
           />
         </div>
         <div class="w-full md:w-5/12 ml-auto mr-auto px-4">
@@ -92,7 +92,5 @@
 <script>
   export default {
     name: "AGrowingCompany",
-
-    inject: ['baseUrl'],
   }
 </script>

@@ -54,7 +54,5 @@
       Navigation: () => import('./../../components/Navigation'),
       PageFooter: () => import('./../../components/Footer'),
     },
-
-    inject: ['baseApiUrl'],
   }
 </script>

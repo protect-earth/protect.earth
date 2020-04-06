@@ -4,10 +4,7 @@
       class="relative pt-16 pb-32 flex content-center items-center justify-center"
       style="min-height: 75vh;"
     >
-      <div
-        class="absolute top-0 w-full h-full bg-center bg-cover"
-        :style="`background-image: url(${baseUrl}img/hero-bg.jpg);`"
-      >
+      <div class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image">
         <span
           id="blackOverlay"
           class="w-full h-full absolute opacity-50 bg-black"
@@ -119,7 +116,5 @@
 <script>
   export default {
     name: "HeroWithCards",
-
-    inject: ['baseUrl'],
   }
 </script>

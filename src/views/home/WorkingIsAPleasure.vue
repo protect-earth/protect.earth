@@ -34,7 +34,7 @@
           >
             <img
               alt="..."
-              :src="`${baseUrl}img/river-top.jpeg`"
+              :src="require('./../../assets/river-top.jpeg')"
               class="w-full align-middle rounded-t-lg"
             />
             <blockquote class="relative p-8 mb-4">
@@ -67,7 +67,5 @@
 <script>
   export default {
     name: "WorkingIsAPleasure",
-
-    inject: ['baseUrl'],
   }
 </script>

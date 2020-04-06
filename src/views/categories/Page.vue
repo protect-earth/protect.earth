@@ -1,9 +1,7 @@
 <template>
   <main class="profile-page">
     <section class="relative block" style="height: 500px;">
-      <div class="absolute top-0 w-full h-full bg-center bg-cover"
-           :style="`background-image: url(${baseUrl}img/hero-bg.jpg);`"
-      >
+      <div class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image">
         <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span></div>
       <div class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
            style="height: 70px; transform: translateZ(0px);">
@@ -20,7 +18,7 @@
             <div class="flex flex-wrap justify-center">
               <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
                 <div class="relative"><img alt="..."
-                                           :src="`${baseUrl}img/hero-bg.jpg`"
+                                           :src="require('./../../assets/hero-bg.jpg')"
                                            class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
                                            style="max-width: 150px;">
                 </div>
@@ -80,8 +78,5 @@
     name: 'CategoryPage',
 
     props: ['category'],
-
-    inject: ['baseUrl'],
-
   }
 </script>

@@ -16,7 +16,7 @@
           <div class="px-6">
             <img
               alt="..."
-              src="@/assets/hero-bg.jpg"
+              :src="require('./../../assets/hero-bg.jpg')"
               class="shadow-lg rounded-full max-w-full mx-auto"
               style="max-width: 120px;"
             />
@@ -164,7 +164,5 @@
 <script>
   export default {
     name: "Team",
-
-    inject: ['baseUrl'],
   }
 </script>
