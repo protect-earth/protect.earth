@@ -16,7 +16,7 @@
           <div class="px-6">
             <img
               alt="..."
-              :src="require('./../../assets/hero-bg.jpg')"
+              :src="require('./../../assets/Avatar01.png')"
               class="shadow-lg rounded-full max-w-full mx-auto"
               style="max-width: 120px;"
             />
@@ -52,7 +52,7 @@
           <div class="px-6">
             <img
               alt="..."
-              src="@/assets/hero-bg.jpg"
+              :src="require('./../../assets/Avatar02.png')"
               class="shadow-lg rounded-full max-w-full mx-auto"
               style="max-width: 120px;"
             />
@@ -82,7 +82,7 @@
           <div class="px-6">
             <img
               alt="..."
-              src="@/assets/hero-bg.jpg"
+              :src="require('./../../assets/Avatar03.png')"
               class="shadow-lg rounded-full max-w-full mx-auto"
               style="max-width: 120px;"
             />
@@ -118,7 +118,7 @@
           <div class="px-6">
             <img
               alt="..."
-              src="@/assets/hero-bg.jpg"
+              :src="require('./../../assets/Avatar04.png')"
               class="shadow-lg rounded-full max-w-full mx-auto"
               style="max-width: 120px;"
             />
