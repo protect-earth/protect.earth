@@ -41,18 +41,33 @@
                 Computer Science
               </div>
             </div>
-            <div class="mt-10 py-10 border-t border-gray-300 text-center">
+            <div class="mt-10 py-10 border-t border-gray-300 text-justify">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
-                  <p class="mb-4 text-lg leading-relaxed text-gray-800" v-html="category && category.body" >
-                    An artist of
-                  considerable range, Jenna the name taken by Melbourne-raised, Brooklyn-based Nick Murphy writes,
-                  performs and records all of his own music, giving it a warm, intimate feel with a solid groove
-                  structure. An artist of considerable range.</p>
-
+                  <p class="mb-4 text-lg leading-relaxed text-gray-800" v-html="category && category.body"/>
                   <a href="#" class="font-normal text-pink-500">Do something about it</a></div>
               </div>
             </div>
+
+            <div class="mt-10 py-10  text-justify">
+              <div class="flex flex-wrap justify-center">
+                <div class="w-full lg:w-9/12 px-4">
+                  <ul>
+                    <li v-for="(action, index) in actions"
+                        :key="index"
+                        class="mt-6"
+                    >
+                      <p class="mb-2 text-lg text-bold text-blue-600">
+                        {{ action.title }}
+                      </p>
+
+                      <p v-html="action.description"></p>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -69,17 +84,25 @@
     props: ['categorySlug'],
 
     data: () => ({
-      category: null
+      actions: [],
+      category: null,
     }),
 
     mounted() {
       this.showCategory()
+        .then(() => this.getActions())
     },
 
     methods: {
       showCategory() {
-        Api.showCategory(this.categorySlug).then(category => {
+        return Api.showCategoryWithSlug(this.categorySlug).then(category => {
           this.category = category
+        })
+      },
+
+      getActions() {
+        Api.getActionsWithCategory(this.category.id).then(({data}) => {
+          this.actions = [...data]
         })
       },
     },
