@@ -6,7 +6,7 @@ Vue.use(Router)
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  scrollBehavior: () => ({y: 0}),
+  scrollBehavior: () => ({ y: 0 }),
   routes: [
     {
       path: '/',
@@ -61,6 +61,18 @@ const router = new Router({
       name: 'CategoryShow',
       component: () =>
         import(/* webpackChunkName: "CategoryShow" */ './views/categories/Show'),
+    },
+    {
+      path: '/search',
+      name: 'SearchIndex',
+      component: () =>
+        import(/* webpackChunkName: "SearchIndex" */ './views/search/Index'),
+    },
+    {
+      path: '/search/:searchTerm',
+      name: 'SearchQuery',
+      component: () =>
+        import(/* webpackChunkName: "SearchQuery" */ './views/search/Query'),
     },
   ],
 })
