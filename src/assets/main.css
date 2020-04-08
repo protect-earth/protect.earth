@@ -2,8 +2,12 @@
 
 @tailwind components;
 
-@tailwind utilities;
+.bg-hero-image {
+  background-image: url('./hero-bg.jpg')
+}
 
- .bg-hero-image {
-   background-image: url('./hero-bg.jpg')
- }
+a {
+  @apply text-pink-500;
+}
+
+@tailwind utilities;
