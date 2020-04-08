@@ -15,29 +15,12 @@
       <div class="container mx-auto px-4">
         <div class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64">
           <div class="px-6">
-            <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                <div class="relative"><img alt="..."
-                                           :src="require('./../../assets/hero-bg.jpg')"
-                                           class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                                           style="max-width: 150px;">
-                </div>
-              </div>
+            <div class="text-center mt-12">
+              <h3 class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
+                About
+              </h3>
             </div>
-            <div class="text-center mt-12"><h3 class="text-4xl font-semibold leading-normal mb-2 text-gray-800 mb-2">
-              About</h3>
-              <div class="text-sm leading-normal mt-0 mb-2 text-gray-500 font-bold uppercase"><i
-                class="fas fa-map-marker-alt mr-2 text-lg text-gray-500"></i> everywhere
-              </div>
-              <div class="mb-2 text-gray-700 mt-10"><i class="fas fa-briefcase mr-2 text-lg text-gray-500"></i>Solution
-                Manager
-              </div>
-              <div class="mb-2 text-gray-700">
-                <i class="fas fa-university mr-2 text-lg text-gray-500"></i>
-                University of Computer Science
-              </div>
-            </div>
-            <div class="mt-10 py-10 border-t border-gray-300 text-center">
+            <div class="mt-10 py-10 border-gray-300">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4" v-html="content">
                 </div>
@@ -55,13 +38,9 @@
     name: "BasePage",
 
     props: {
-      content: {
-        default: `Heeey I need some HTML content over here!!`
-      },
+      title: { required: true },
+      content: { required: true },
     },
   }
 </script>
 
-<style scoped>
-
-</style>

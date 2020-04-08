@@ -1,14 +1,11 @@
 const htmlContent = `
     <p class="mb-4 text-lg leading-relaxed text-gray-800">
-      Protect.Earth came around after
-      <a href="https://philsturgeon.com/">Phil</a>
-      went riding
-      around Europe in the summer of 2019, the hottest year on record with the hottest three months on
-      record.
+      Protect.Earth came around after <a href="https://philsturgeon.com/">Phil</a> went riding around
+      Europe in the summer of 2019, the hottest year on record with the hottest three months on record.
     </p>
     <p class="mb-4 text-lg leading-relaxed text-gray-800">
-      Phil was <a href="https://phil.bike/trees/">raising money for trees</a> with <a
-      href="https://offset.earth/">Offset Earth</a>, and after the tour lead to a lengthy injury he
+      Phil was <a href="https://phil.bike/trees/">raising money for trees</a> with
+      <a href="https://offset.earth/">Offset Earth</a>, and after the tour lead to a lengthy injury he
       wanted to find other ways to fight the climate crisis.
     </p>
     <p class="mb-4 text-lg leading-relaxed text-gray-800">Together with contributions from 50+ people, we

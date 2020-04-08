@@ -1,6 +1,6 @@
 <template>
   <fragment>
-    <base-page :content="content"></base-page>
+    <base-page :title="title" :content="content"></base-page>
   </fragment>
 </template>
 
@@ -12,6 +12,7 @@
 
     data: () => ({
       content,
+      title: 'Foo baaar',
     }),
   }
 </script>
