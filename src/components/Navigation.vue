@@ -33,7 +33,7 @@
           </li>
         </ul>
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-		      <li class="flex items-center">
+          <li class="mr-3">
             <search-bar v-show="this.$route.path.toLowerCase().indexOf('search') === -1"></search-bar>
           </li>
           <li>
