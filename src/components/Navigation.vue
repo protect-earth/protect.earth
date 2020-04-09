@@ -33,6 +33,9 @@
           </li>
         </ul>
         <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
+          <li class="mr-3">
+            <search-bar v-show="this.$route.path.toLowerCase().indexOf('search') === -1"></search-bar>
+          </li>
           <li>
             <t-dropdown
               text="I am a..."
@@ -101,6 +104,9 @@
 <script>
 export default {
   name: 'Navigation',
+  components: {
+    SearchBar: () => import('./search/SearchBar')
+  }
   data() {
     return {
       tags: [
@@ -131,7 +137,7 @@ export default {
       ]
     }
   }
-}
+};
 </script>
 
 <style></style>
