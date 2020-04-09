@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.13.0",
+    "algoliasearch": "^4.1.0",
     "core-js": "^3.6.4",
     "vue": "^2.6.11",
     "vue-analytics": "^5.22.1",
