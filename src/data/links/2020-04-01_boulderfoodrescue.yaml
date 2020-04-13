@@ -3,6 +3,8 @@ url: 'https://www.boulderfoodrescue.org/'
 countries: [us]
 categories:
   - food
+  - waste
+tags:
   - zero-waste
 description: >-
   We facilitate the sustainable redistribution of healthy food that would
