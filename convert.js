@@ -1,9 +1,9 @@
-const fs = require('fs');
-const yaml = require('js-yaml');
-const slugify = require('slugify');
+const fs = require('fs')
+const yaml = require('js-yaml')
+const slugify = require('slugify')
 
-const srcLinksFolder = './src/data/links/';
-const statamicActionsFolder = './api/content/collections/actions/';
+const srcLinksFolder = './src/data/links/'
+const statamicActionsFolder = './api/content/collections/actions/'
 
 const categorySlugIdMap = {
   'carbon-reduction': '207559a4-fe66-4c3d-bc6c-4f721f9562a4',
@@ -25,38 +25,48 @@ const categorySlugIdMap = {
   travel: '97826809-ed97-424c-9c46-cedba824add8',
   volunteering: 'ee42a632-ac6a-4f89-802a-8111cf674d4c',
   'zero-waste': 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
-  waste: 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
-};
+  waste: 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43'
+}
 
 fs.readdir(srcLinksFolder, (err, files) => {
   files.forEach(file => {
-    const fileDate = file.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)[0];
+    const fileDate = file.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)[0]
 
     const linkData = yaml.load(
       fs.readFileSync(`${srcLinksFolder}/${file}`, 'utf8')
-    );
+    )
 
     const newActionData = {
-      ...linkData,
-      blueprint: 'action',
+      title: linkData.title,
+      countries: linkData.countries || [],
+      featured: linkData.featured === true,
+      description: linkData.description,
+      action_url: linkData.url,
       categories: linkData.categories
         .map(slug => categorySlugIdMap[slug])
         .filter(id => id !== null),
-    };
+      twitter: linkData.twitter || null,
+      instagram: linkData.instagram || null,
+      image: linkData.instagram || null,
+      tags: linkData.tags || [],
+      blueprint: 'action'
+    }
 
-    const newActionMarkdown = `---\n${yaml.dump(newActionData)}\n---`;
+    // url is reserved in statamic 3
+
+    const newActionMarkdown = `---\n${yaml.dump(newActionData)}\n---`
 
     const newFilename = `${fileDate}.${slugify(linkData.title, {
       remove: /[*+~.()'"?!:@,]/g,
-      lower: true,
-    })}.md`;
+      lower: true
+    })}.md`
 
-    console.log(`creating ${newFilename}`);
+    console.log(`creating ${newFilename}`)
 
     fs.writeFileSync(
       `${statamicActionsFolder}/${newFilename}`,
       newActionMarkdown,
       'utf8'
-    );
-  });
-});
+    )
+  })
+})

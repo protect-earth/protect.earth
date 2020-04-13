@@ -3,7 +3,6 @@ template: default
 layout: layout
 blueprints:
   - action
-  - entry_link
 revisions: false
 route: actions
 date: true
