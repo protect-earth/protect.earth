@@ -75,6 +75,12 @@ const SEO = ({ title, description, keywords, meta, image }) => {
       titleTemplate={`%s | ${siteMetadata.title}`}
       meta={metaTags}
       link={[{ rel: 'shortcut icon', type: 'image/png', href: `${favicon}` }]}
+      script={[
+        {
+          src: 'https://widget.earthdaylive2020.org/widget.js',
+          async: true,
+        },
+      ]}
     />
   );
 };

@@ -1,12 +1,9 @@
 import React from 'react';
 
-// import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Dropdown from 'react-bootstrap/Dropdown';
 import DropdownButton from 'react-bootstrap/DropdownButton';
-// import Form from 'react-bootstrap/Form';
-// import FormControl from 'react-bootstrap/FormControl';
 import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
@@ -70,11 +67,6 @@ const Header = ({ dark }) => (
               <Nav.Link href="https://github.com/protect-earth/protect.earth">
                 Contribute
               </Nav.Link>
-
-              {/* <Form inline>
-                <FormControl type="text" placeholder="Search" />
-                <Button>Search</Button>
-              </Form> */}
             </Navbar.Collapse>
           </Navbar>
         </Col>
