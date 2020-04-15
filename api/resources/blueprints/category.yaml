@@ -3,8 +3,7 @@ sections:
   main:
     display: Main
     fields:
-      -
-        handle: title
+      - handle: title
         field:
           input_type: text
           character_limit: 50
@@ -12,8 +11,7 @@ sections:
           localizable: false
           listable: hidden
           display: Title
-      -
-        handle: slug
+      - handle: slug
         field:
           generate: true
           type: slug
@@ -21,16 +19,14 @@ sections:
           listable: hidden
           display: Slug
           validate: alpha_dash
-      -
-        handle: intro
+      - handle: intro
         field:
           input_type: text
           type: text
           localizable: false
           listable: hidden
           display: Intro
-      -
-        handle: image
+      - handle: image
         field:
           mode: grid
           restrict: false
@@ -42,15 +38,8 @@ sections:
           display: Image
           container: assets
           folder: categories
-      -
-        handle: body
+      - handle: content
         field:
-          restrict: false
-          automatic_line_breaks: true
-          automatic_links: false
-          escape_markup: false
-          smartypants: false
           type: markdown
-          localizable: false
-          listable: hidden
-          display: Body
+          display: Content
+          localizable: true
