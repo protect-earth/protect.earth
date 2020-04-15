@@ -1,7 +1,5 @@
 import React from 'react';
-
-import { Layout } from '../components';
-
+import { Layout, SuggestionForm } from '../components';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
@@ -47,6 +45,9 @@ const AboutPage = () => (
           </p>
         </Col>
       </Row>
+    </Container>
+    <Container>
+      <SuggestionForm />
     </Container>
   </Layout>
 );
