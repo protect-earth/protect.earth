@@ -30,12 +30,10 @@ export default ({ data }) => {
           <Container>
             <Row>
               <Col xs={8} className="bg-dark text-white p-4">
-                <h1 className="mb-2">Start saving the planet today.</h1>
+                <h1 className="mb-2">Start saving the planet today</h1>
                 <p>
-                  Protect.Earth is a list of strategies, products, services, and
-                  companies focused on sustainability and environmental
-                  protection. We are faced with a global existential crisis -
-                  every little bit you can do helps.
+                  We are faced with a global existential crisis but together our
+                  personal choices can create huge systematic change.
                 </p>
               </Col>
             </Row>
@@ -43,39 +41,64 @@ export default ({ data }) => {
         </Jumbotron>
 
         <Container>
-          {/* <Row>
-            <Col>
-              <Card>
-                <Card.Body>
-                  <Row>
-                    <Col md={8} lg={10}>
-                      <input
-                        type="text"
-                        className="form-control form-control-minimal"
-                        placeholder="Find resources, ideas and services here"
-                        aria-label="Search"
-                      />
-                    </Col>
-                    <Col md={4} lg={2}>
-                      <Button block>Search</Button>
-                    </Col>
-                  </Row>
-                </Card.Body>
-                <Card.Footer>
-                  <div className="tags">
-                    <Link to="">#trashtag</Link>
-                    <Link to="">#carbonoffset</Link>
-                  </div>
-                </Card.Footer>
-              </Card>
-            </Col>
-          </Row> */}
           <Row>
-            <Col>
-              <RecentLinks links={data.allLinksYaml.nodes} showAmount={5} />
+            <Col xs={6}>
+              <h2>What can we do?</h2>
+              <p>
+                We all need to improve our carbon footprint. Everyone. Most
+                footprints in developed countries are 10-20 tonnes, but the
+                sustainable target for each person is 5 tonnes by 2030, 2 tonnes
+                by 2050. We are not on target.
+              </p>
+              <ul>
+                <li>
+                  <a href="/tags/track">track</a> your carbon footprint
+                </li>
+                <li>
+                  identify ways to <a href="/tags/reduce">reduce</a> footprint
+                  and waste
+                </li>
+                <li>
+                  <a href="/tags/shift">shift</a> to sustainable alternatives
+                  for things you currently do
+                </li>
+                <li>
+                  <a href="/tags/refuse">refuse</a> pointless trips and waste
+                </li>
+                <li>
+                  chose second hand and <a href="/tags/reuse">reuse</a> instead
+                  of buying new
+                </li>
+                <li>
+                  save cash learning to <a href="/tags/repair">repair</a> things
+                </li>
+                <li>
+                  <a href="/tags/recycle">recycle</a> as little as possible
+                </li>
+                <li>
+                  as a last resort <a href="/tags/offset">offset</a> what you
+                  cannot avoid any other way
+                </li>
+                <li>
+                  <a href="/tags/vote">vote</a> for politicians who will take
+                  drastic immediate action
+                </li>
+                <li>
+                  <a href="/tags/choose">choose</a> the companies we patronize,
+                  to encourage positive trends
+                </li>
+                <li>
+                  <a href="/tags/inspire">inspire</a> others to understand the
+                  gravity of the problems we're solving
+                </li>
+              </ul>
+            </Col>
+            <Col xs={6}>
+              <RecentLinks links={data.allLinksYaml.nodes} showAmount={3} />
             </Col>
           </Row>
-          <Row className="pt-5">
+
+          <Row>
             <Col>
               <div className="card-grid">
                 {categories.map(category => (

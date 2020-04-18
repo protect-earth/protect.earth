@@ -4,6 +4,8 @@ countries:
   - us
 categories:
   - footprint-calculators
+tags:
+  - track
 description: >-
   The calculator estimates your footprint in three areas- home energy,
   transportation and waste. Everyone's carbon footprint is different depending

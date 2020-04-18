@@ -4,6 +4,9 @@ countries:
   - us
 categories:
   - footprint-calculators
+tags:
+  - track
+  - offset
 description: >-
   Calculate your footprint based on flights, driving, shipping, and make
   tax-deductible donations to offset your emissions.
