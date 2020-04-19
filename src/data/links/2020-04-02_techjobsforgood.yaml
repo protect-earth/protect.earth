@@ -3,6 +3,9 @@ url: 'https://techjobsforgood.com/'
 countries: [us]
 categories:
   - jobs
+tags:
+  - shift
+  - career
 description: >-
   Find tech jobs at social impact companies, foundations, and innovative
   nonprofits in the United States. They cover all sorts of impact areas, with
