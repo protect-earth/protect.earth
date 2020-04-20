@@ -1,5 +1,5 @@
 ---
 title: 'Podcasts'
-image: ../images/carbon-reduction.jpg
-intro:
+image: ../images/podcasts.jpg
+intro: Listen to progress, problems, and solutions for the climate crisis.
 ---
