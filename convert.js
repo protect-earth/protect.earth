@@ -1,9 +1,9 @@
-const fs = require('fs')
-const yaml = require('js-yaml')
-const slugify = require('slugify')
+const fs = require('fs');
+const yaml = require('js-yaml');
+const slugify = require('slugify');
 
-const srcLinksFolder = './src/data/links/'
-const statamicActionsFolder = './api/content/collections/actions/'
+const srcLinksFolder = './src/data/links/';
+const statamicActionsFolder = './api/content/collections/actions/';
 
 const categorySlugIdMap = {
   'carbon-reduction': '207559a4-fe66-4c3d-bc6c-4f721f9562a4',
@@ -19,22 +19,23 @@ const categorySlugIdMap = {
   'land-management': '411e32f8-59bc-4fbb-ac7f-3d2a908b039e',
   news: '0ec6e5b5-0a80-4c8d-b45f-b78c99492d8d',
   politics: '3d78ba9a-4f85-464b-a330-1cfb5c137328',
+  podcasts: '9db93577-0b4a-4bdb-ad1a-f9a188f463df',
   reforestation: '63a7cfb3-7cd5-4282-af9d-e5ed41572d1b',
   'renewable-energy': 'f9b2c5ee-8da3-446b-b865-0d716debed30',
   transportation: '0a32cb28-6330-4881-8671-824476ed5859',
   travel: '97826809-ed97-424c-9c46-cedba824add8',
   volunteering: 'ee42a632-ac6a-4f89-802a-8111cf674d4c',
   'zero-waste': 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
-  waste: 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43'
-}
+  waste: 'a1a4ac88-627d-4bc7-a5b5-d3dcdc10cc43',
+};
 
 fs.readdir(srcLinksFolder, (err, files) => {
   files.forEach(file => {
-    const fileDate = file.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)[0]
+    const fileDate = file.match(/([0-9]{4}-[0-9]{2}-[0-9]{2})/)[0];
 
     const linkData = yaml.load(
       fs.readFileSync(`${srcLinksFolder}/${file}`, 'utf8')
-    )
+    );
 
     const newActionData = {
       title: linkData.title,
@@ -49,24 +50,24 @@ fs.readdir(srcLinksFolder, (err, files) => {
       instagram: linkData.instagram || null,
       image: linkData.instagram || null,
       tags: linkData.tags || [],
-      blueprint: 'action'
-    }
+      blueprint: 'action',
+    };
 
     // url is reserved in statamic 3
 
-    const newActionMarkdown = `---\n${yaml.dump(newActionData)}\n---`
+    const newActionMarkdown = `---\n${yaml.dump(newActionData)}\n---`;
 
     const newFilename = `${fileDate}.${slugify(linkData.title, {
       remove: /[*+~.()'"?!:@,]/g,
-      lower: true
-    })}.md`
+      lower: true,
+    })}.md`;
 
-    console.log(`creating ${newFilename}`)
+    console.log(`creating ${newFilename}`);
 
     fs.writeFileSync(
       `${statamicActionsFolder}/${newFilename}`,
       newActionMarkdown,
       'utf8'
-    )
-  })
-})
+    );
+  });
+});
