@@ -1,37 +1,36 @@
 <template>
   <section class="bg-gray-300">
-    <div class="container mx-auto flex flex-wrap ">
+    <div class="container mx-auto flex flex-wrap">
       <listing-category :categories="categories"></listing-category>
     </div>
   </section>
 </template>
 
 <script>
-  import Api from './../../services/api'
-  import ListingCategory from "../../components/listing/Category"
+import Api from './../../services/api'
+import ListingCategory from '../../components/listing/Category'
 
-  export default {
-    name: "DisplayCategories",
+export default {
+  name: 'DisplayCategories',
 
-    components: {
-      ListingCategory,
-    },
+  components: {
+    ListingCategory
+  },
 
-    data: () => ({
-      categories: [],
-    }),
+  data: () => ({
+    categories: []
+  }),
 
-    created() {
-      this.getCategories()
-    },
+  created() {
+    this.getCategories()
+  },
 
-    methods: {
-      getCategories() {
-        Api.getCategories().then(({data: categories}) => {
-          this.categories = [...categories]
-        })
-      },
-    },
-
+  methods: {
+    getCategories() {
+      Api.getCategories().then(({ data: categories }) => {
+        this.categories = [...categories]
+      })
+    }
   }
+}
 </script>

@@ -49,7 +49,9 @@ export default {
   showCategoryWithSlug(categorySlug) {
     return fetch(`${baseApiUrl}/api/collections/categories/entries?filter[slug:equals]=${categorySlug}`)
       .then(r => r.json())
-      .then(({data}) => {
+      .then(({
+        data
+      }) => {
         if (data.length !== 1) {
           return null
         }
