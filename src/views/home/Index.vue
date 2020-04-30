@@ -1,58 +1,53 @@
 <template>
   <div class="text-gray-800 antialiased">
-
-    <navigation/>
+    <navigation />
 
     <main>
+      <hero-with-cards />
 
-      <hero-with-cards/>
+      <display-categories />
 
-      <display-categories/>
+      <working-is-a-pleasure />
 
-      <working-is-a-pleasure/>
+      <a-growing-company />
 
-      <a-growing-company/>
+      <team />
 
-      <team/>
-
-      <build-something/>
+      <build-something />
 
       <work-with-us></work-with-us>
-
     </main>
 
-    <page-footer/>
-
+    <page-footer />
   </div>
 </template>
 
 <script>
-  import HeroWithCards from "./HeroWithCards"
-  import WorkingIsAPleasure from "./WorkingIsAPleasure"
-  import AGrowingCompany from "./AGrowingCompany"
-  import Team from "./Team"
-  import BuildSomething from "./BuildSomething"
-  import WorkWithUs from "./WorkWithUs"
-  import DisplayCategories from "./DisplayCategories"
+import HeroWithCards from './HeroWithCards'
+import WorkingIsAPleasure from './WorkingIsAPleasure'
+import AGrowingCompany from './AGrowingCompany'
+import Team from './Team'
+import BuildSomething from './BuildSomething'
+import WorkWithUs from './WorkWithUs'
+import DisplayCategories from './DisplayCategories'
 
-  export default {
+export default {
+  name: 'HomeIndex',
 
-    name: "HomeIndex",
+  metaInfo: {
+    title: 'Welcome'
+  },
 
-    metaInfo: {
-      title: 'Welcome',
-    },
-
-    components: {
-      DisplayCategories,
-      WorkWithUs,
-      BuildSomething,
-      Team,
-      AGrowingCompany,
-      WorkingIsAPleasure,
-      HeroWithCards,
-      Navigation: () => import('./../../components/Navigation'),
-      PageFooter: () => import('./../../components/Footer'),
-    },
+  components: {
+    DisplayCategories,
+    WorkWithUs,
+    BuildSomething,
+    Team,
+    AGrowingCompany,
+    WorkingIsAPleasure,
+    HeroWithCards,
+    Navigation: () => import('./../../components/Navigation'),
+    PageFooter: () => import('./../../components/Footer')
   }
+}
 </script>
