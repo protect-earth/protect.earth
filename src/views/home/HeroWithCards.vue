@@ -5,21 +5,14 @@
       style="min-height: 75vh;"
     >
       <div class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image">
-        <span
-          id="blackOverlay"
-          class="w-full h-full absolute opacity-50 bg-black"
-        ></span>
+        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
       </div>
       <div class="container relative mx-auto">
         <div class="items-center flex flex-wrap">
           <div class="w-full lg:w-7/12 px-4 ml-auto mr-auto text-center">
             <div class="flex flex-col pr-12">
-              <h1 class="text-white font-semibold text-5xl">
-                Start saving the planet today.
-              </h1>
-              <p
-                class="mx-auto text-center mt-4 text-lg lg:w-10/12 text-gray-300"
-              >
+              <h1 class="text-white font-semibold text-5xl">Start saving the planet today.</h1>
+              <p class="mx-auto text-center mt-4 text-lg lg:w-10/12 text-gray-300">
                 Protect.Earth is a list of strategies, products, services, and
                 companies focused on sustainability and environmental
                 protection. We are faced with a global existential crisis -
@@ -42,10 +35,7 @@
           x="0"
           y="0"
         >
-          <polygon
-            class="text-gray-300 fill-current"
-            points="2560 0 2560 100 0 100"
-          ></polygon>
+          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
         </svg>
       </div>
     </div>
@@ -59,13 +49,12 @@
             >
               <div class="px-4 py-5 flex-auto">
                 <div
-                  class="text-white p-3 text-center inline-flex items-center
-                  justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
+                  class="text-white p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-red-400"
                 >
                   <i class="fas fa-car"></i>
                 </div>
                 <h6 class="text-xl font-semibold">{{ recentActions[0].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[0].description"/>
+                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[0].description" />
               </div>
             </div>
           </div>
@@ -80,7 +69,7 @@
                   <i class="fas fa-retweet"></i>
                 </div>
                 <h6 class="text-xl font-semibold">{{ recentActions[1].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[1].description"/>
+                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[1].description" />
               </div>
             </div>
           </div>
@@ -95,7 +84,7 @@
                   <i class="fas fa-home"></i>
                 </div>
                 <h6 class="text-xl font-semibold">{{ recentActions[2].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[2].description"/>
+                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[2].description" />
               </div>
             </div>
           </div>
@@ -106,25 +95,25 @@
 </template>
 
 <script>
-  import Api from './../../services/api'
+import Api from './../../services/api'
 
-  export default {
-    name: "HeroWithCards",
+export default {
+  name: 'HeroWithCards',
 
-    data: () => ({
-      recentActions: [],
-    }),
+  data: () => ({
+    recentActions: []
+  }),
 
-    created() {
-      this.getRecentActions()
-    },
+  created() {
+    this.getRecentActions()
+  },
 
-    methods: {
-      getRecentActions() {
-        Api.getRecentActions().then(({data: recentActions}) => {
-          this.recentActions = [...recentActions]
-        })
-      },
-    },
+  methods: {
+    getRecentActions() {
+      Api.getRecentActions().then(({ data: recentActions }) => {
+        this.recentActions = [...recentActions]
+      })
+    }
   }
+}
 </script>
