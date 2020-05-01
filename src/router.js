@@ -80,7 +80,7 @@ categories = categories.map(function(category) {
 
 
 const router = new Router({
-  //mode: 'history',
+  mode: 'history',
   base: process.env.BASE_URL,
   scrollBehavior: () => ({ y: 0 }),
   // Merge base routes and category routes.
