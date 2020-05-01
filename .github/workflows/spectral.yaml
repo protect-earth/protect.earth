@@ -9,6 +9,6 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: stoplightio/spectral-action@master
+      - uses: stoplightio/spectral-action@ntk/better_checkrun
         with:
           file_glob: 'src/data/links/*.yaml'
