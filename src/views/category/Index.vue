@@ -21,8 +21,8 @@
                     </div>
 
                     <div
-                        class="image-left-side absolute top-0 right-0 w-3/4 h-full bg-cover bg-center rounded-md shadow-lg"
-                        :style="{backgroundImage: 'url(\'' + cat.image.permalink + '\')'}"
+                        class="image-left-side absolute top-0 right-0 w-3/4 h-full bg-cover bg-center background-gray-300 rounded-md shadow-lg"
+                        :style="{backgroundImage: 'url(\'' + (cat.image ? cat.image.permalink : '') + '\')'}"
                         role="img"
                         aria-label=""
                     ></div>
