@@ -15,12 +15,12 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-tagmanager',
+      resolve: 'gatsby-plugin-fathom',
       options: {
-        // TODOL Supply ID for GTM here
-        // id: 'GTM-PZRPQ5H',
-        // set this to true to make GTM work in dev environment (for testing/debug)
-        includeInDevelopment: false,
+        // Unique site id
+        siteId: 'WWCDWFNK',
+        // Domain whitelist
+        whitelistHostnames: ['protect.earth'],
       },
     },
     `gatsby-transformer-sharp`,
