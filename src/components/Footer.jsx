@@ -76,6 +76,18 @@ const Footer = () => {
             </div> */}
           </Col>
         </Row>
+        <Row noGutters>
+          <a
+            href="https://www.netlify.com"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <img
+              alt="Deploys by netlify"
+              src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+            />
+          </a>
+        </Row>
       </Container>
     </footer>
   );
