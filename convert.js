@@ -12,6 +12,7 @@ const categorySlugIdMap = {
   'consumer-products': 'a68b7a57-c0a5-4b27-81d2-93a19f2787a1',
   documentaries: '49f0ae64-b03a-4d50-bbdc-edd765ef4500',
   food: '1e06ea25-373d-440c-9abd-408710b475d0',
+  finance: 'd8a27ec4-c533-4a8d-a8fe-c217f073c790',
   'footprint-calculators': '681bffaf-a44c-4449-ae96-bf780506c862',
   'home-improvements': '6ad9cfc5-eac0-455e-9ad0-f537896373ba',
   hygiene: '7adab10c-985b-42e2-ab8c-eee35b5a8817',

@@ -10,15 +10,3 @@ preferences:
       mode: table
     actions:
       mode: table
-  collections:
-    categories:
-      columns:
-        - date
-        - title
-        - slug
-    actions:
-      columns:
-        - date
-        - title
-        - url
-        - categories

@@ -1,0 +1,41 @@
+title: Solution
+sections:
+  main:
+    display: Main
+    fields:
+      -
+        handle: title
+        field:
+          input_type: text
+          type: text
+          localizable: false
+          listable: true
+          display: Title
+      -
+        handle: slug
+        field:
+          generate: true
+          type: slug
+          localizable: false
+          listable: true
+          display: Slug
+      -
+        handle: project_drawdown_url
+        field:
+          placeholder: 'https://www.drawdown.org/solutions/{solution}'
+          input_type: url
+          type: text
+          localizable: false
+          listable: hidden
+          display: 'Project Drawdown URL'
+          validate: active_url
+      -
+        handle: sector
+        field:
+          type: taxonomy
+          localizable: false
+          listable: true
+          display: Sector
+          mode: default
+          taxonomies:
+            - sectors
