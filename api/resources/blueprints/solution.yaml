@@ -34,7 +34,7 @@ sections:
         field:
           type: taxonomy
           localizable: false
-          listable: hidden
+          listable: true
           display: Sector
           mode: default
           taxonomies:
