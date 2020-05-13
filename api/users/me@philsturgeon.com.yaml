@@ -18,7 +18,7 @@ preferences:
         - slug
     actions:
       columns:
-        - date
         - title
         - url
         - categories
+        - solutions
