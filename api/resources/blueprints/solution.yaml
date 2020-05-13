@@ -36,3 +36,6 @@ sections:
           localizable: false
           listable: hidden
           display: Sector
+          mode: default
+          taxonomies:
+            - sectors
