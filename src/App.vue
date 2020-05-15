@@ -1,18 +1,17 @@
 <template>
   <div id="app">
-    <router-view/>
+    <router-view />
   </div>
 </template>
 
 <script>
+export default {
+  name: 'App',
 
-  export default {
-    name: 'App',
+  metaInfo: {
+    titleTemplate: '%s — Protect Earth',
+  },
 
-    metaInfo: {
-      titleTemplate: '%s — Protect Earth',
-    },
-
-    components: {}
-  }
+  components: {},
+};
 </script>

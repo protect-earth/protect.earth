@@ -1,20 +1,17 @@
 <template>
-  <categories-with-base-cards/>
+  <categories-with-base-cards />
 </template>
 
 <script>
-  import CategoriesWithBaseCards from "./CategoriesWithBaseCards"
+import CategoriesWithBaseCards from './CategoriesWithBaseCards';
 
-  export default {
-    name: "Index",
+export default {
+  name: 'Index',
 
-    components: {
-      CategoriesWithBaseCards,
-    },
-
-  }
+  components: {
+    CategoriesWithBaseCards,
+  },
+};
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

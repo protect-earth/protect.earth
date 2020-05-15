@@ -4,15 +4,24 @@
       class="relative pt-16 pb-32 flex content-center items-center justify-center"
       style="min-height: 75vh;"
     >
-      <div class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image">
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+      <div
+        class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image"
+      >
+        <span
+          id="blackOverlay"
+          class="w-full h-full absolute opacity-50 bg-black"
+        ></span>
       </div>
       <div class="container relative mx-auto">
         <div class="items-center flex flex-wrap">
           <div class="w-full lg:w-7/12 px-4 ml-auto mr-auto text-center">
             <div class="flex flex-col pr-12">
-              <h1 class="text-white font-semibold text-5xl">Start saving the planet today.</h1>
-              <p class="mx-auto text-center mt-4 text-lg lg:w-10/12 text-gray-300">
+              <h1 class="text-white font-semibold text-5xl">
+                Start saving the planet today.
+              </h1>
+              <p
+                class="mx-auto text-center mt-4 text-lg lg:w-10/12 text-gray-300"
+              >
                 Protect.Earth is a list of strategies, products, services, and
                 companies focused on sustainability and environmental
                 protection. We are faced with a global existential crisis -
@@ -35,7 +44,10 @@
           x="0"
           y="0"
         >
-          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          />
         </svg>
       </div>
     </div>
@@ -53,8 +65,13 @@
                 >
                   <i class="fas fa-car"></i>
                 </div>
-                <h6 class="text-xl font-semibold">{{ recentActions[0].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[0].description" />
+                <h6 class="text-xl font-semibold">
+                  {{ recentActions[0].title }}
+                </h6>
+                <p
+                  class="mt-2 mb-4 text-gray-600"
+                  v-html="recentActions[0].description"
+                />
               </div>
             </div>
           </div>
@@ -68,8 +85,13 @@
                 >
                   <i class="fas fa-retweet"></i>
                 </div>
-                <h6 class="text-xl font-semibold">{{ recentActions[1].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[1].description" />
+                <h6 class="text-xl font-semibold">
+                  {{ recentActions[1].title }}
+                </h6>
+                <p
+                  class="mt-2 mb-4 text-gray-600"
+                  v-html="recentActions[1].description"
+                />
               </div>
             </div>
           </div>
@@ -83,8 +105,13 @@
                 >
                   <i class="fas fa-home"></i>
                 </div>
-                <h6 class="text-xl font-semibold">{{ recentActions[2].title }}</h6>
-                <p class="mt-2 mb-4 text-gray-600" v-html="recentActions[2].description" />
+                <h6 class="text-xl font-semibold">
+                  {{ recentActions[2].title }}
+                </h6>
+                <p
+                  class="mt-2 mb-4 text-gray-600"
+                  v-html="recentActions[2].description"
+                />
               </div>
             </div>
           </div>
@@ -95,25 +122,25 @@
 </template>
 
 <script>
-import Api from './../../services/api'
+import Api from './../../services/api';
 
 export default {
   name: 'HeroWithCards',
 
   data: () => ({
-    recentActions: []
+    recentActions: [],
   }),
 
   created() {
-    this.getRecentActions()
+    this.getRecentActions();
   },
 
   methods: {
     getRecentActions() {
       Api.getRecentActions().then(({ data: recentActions }) => {
-        this.recentActions = [...recentActions]
-      })
-    }
-  }
-}
+        this.recentActions = [...recentActions];
+      });
+    },
+  },
+};
 </script>

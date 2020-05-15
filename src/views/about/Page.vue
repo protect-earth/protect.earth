@@ -5,14 +5,14 @@
 </template>
 
 <script>
-  import content from './../../content/about'
+import content from './../../content/about';
 
-  export default {
-    name: 'AboutPage',
+export default {
+  name: 'AboutPage',
 
-    data: () => ({
-      content,
-      title: 'Foo baaar',
-    }),
-  }
+  data: () => ({
+    content,
+    title: 'Foo baaar',
+  }),
+};
 </script>

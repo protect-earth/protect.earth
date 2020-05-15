@@ -7,30 +7,30 @@
 </template>
 
 <script>
-import Api from './../../services/api'
-import ListingCategory from '../../components/listing/Category'
+import Api from './../../services/api';
+import ListingCategory from '../../components/listing/Category';
 
 export default {
   name: 'DisplayCategories',
 
   components: {
-    ListingCategory
+    ListingCategory,
   },
 
   data: () => ({
-    categories: []
+    categories: [],
   }),
 
   created() {
-    this.getCategories()
+    this.getCategories();
   },
 
   methods: {
     getCategories() {
       Api.getCategories().then(({ data: categories }) => {
-        this.categories = [...categories]
-      })
-    }
-  }
-}
+        this.categories = [...categories];
+      });
+    },
+  },
+};
 </script>
