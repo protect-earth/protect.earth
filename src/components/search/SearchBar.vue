@@ -3,13 +3,13 @@
     <div class="flex justify-center">
       <div class="relative mx-auto text-gray-600">
         <input
-          class="border-2 border-gray-300 bg-white h-8 px-5 pr-16 rounded-md text-sm focus:outline-none"
+          class="border-2 border-gray-300 bg-white h-8 px-2 pr-16 rounded-md text-sm focus:outline-none"
           type="search"
           name="search"
           placeholder="Search"
           v-model="searchTerm"
         />
-        <button type="submit" class="absolute right-0 top-0 mt-2 mr-4">
+        <button type="submit" class="absolute right-0 top-0 mt-2 mr-3">
           <svg
             class="text-gray-600 h-4 w-4 fill-current"
             xmlns="http://www.w3.org/2000/svg"
