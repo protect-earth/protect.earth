@@ -40,7 +40,7 @@
                     <li v-for="(action, index) in actions" :key="index" class="mt-6">
                       <a
                         :href="action.action_url"
-                        class="mb-2 text-lg text-bold text-blue-600"
+                        class="mb-2 text-2xl text-bold text-blue-600"
                       >{{ action.title }}</a>
 
                       <p v-html="action.description"></p>
