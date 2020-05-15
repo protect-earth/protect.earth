@@ -11,9 +11,8 @@
         <router-link
           class="text-xl font-bold leading-relaxed inline-block mr-4 py-2 whitespace-no-wrap uppercase text-white"
           :to="{ name: 'Home' }"
+          >Protect.Earth</router-link
         >
-          Protect.Earth
-        </router-link>
 
         <button
           class="cursor-pointer text-xl leading-none px-3 py-1 border border-solid border-transparent rounded bg-transparent block lg:hidden outline-none focus:outline-none"
@@ -24,90 +23,27 @@
         </button>
       </div>
       <div
-        class="lg:flex flex-grow items-center bg-white lg:bg-transparent lg:shadow-none hidden"
+        class="lg:flex flex-grow items-center lg:bg-transparent lg:shadow-none hidden"
         id="example-collapse-navbar"
       >
-        <ul class="flex flex-col lg:flex-row list-none mr-auto">
-          <li class="flex items-center">
-            <!-- Is used to be links over here -->
-          </li>
-        </ul>
-        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto">
-          <li class="mr-3">
+        <ul class="flex flex-col lg:flex-row list-none lg:ml-auto items-center">
+          <li>
             <search-bar
               v-show="this.$route.path.toLowerCase().indexOf('search') === -1"
             ></search-bar>
           </li>
           <li>
-            <t-dropdown
-              text="I am a..."
-              size="sm"
-              :visible-arrow="false"
-              :button-props="{
-                baseClass: `border block rounded inline-flex items-center justify-center`,
-              }"
-            >
-              <template v-slot:button-content>
-                <span>I am a...</span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  viewBox="0 0 24 24"
-                  class="ml-1 h-5 w-5 fill-current text-gray-700"
-                  style="width: 1.25rem; height: 1.25rem;"
-                >
-                  <path
-                    d="M15.3 9.3a1 1 0 0 1 1.4 1.4l-4 4a1 1 0 0 1-1.4 0l-4-4a1 1 0 0 1 1.4-1.4l3.3 3.29 3.3-3.3z"
-                  />
-                </svg>
-              </template>
-
-              <ul>
-                <li v-for="tag in tags" :key="tag.id">
-                  <router-link
-                    :to="{
-                      name: 'TagShow',
-                      params: { tagSlug: tag.id },
-                    }"
-                    href="#"
-                    class="block no-underline px-4 py-2 hover:bg-pink-600 hover:text-white"
-                  >
-                    {{ tag.tagName }}
-                  </router-link>
-                </li>
-              </ul>
-            </t-dropdown>
+            <NavigationLink label="About" :to="{ name: 'About' }" />
           </li>
-          <li class="flex items-center">
-            <router-link
-              :to="{ name: 'About' }"
-              class=" text-gray-200 border-2 active:bg-gray-800 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3"
-              type="button"
-              style="transition: all 0.15s ease 0s;"
-            >
-              <i class="fas fa-arrow-alt-circle-down"></i>
-              About
-            </router-link>
+          <!-- <li>
+            <NavigationLink label="Guides" :to="{ name: 'Guides' }" />
           </li>
-          <li class="flex items-center">
-            <a
-              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://twitter.com/_protectearth"
-              ><i
-                class="lg:text-gray-300 text-gray-500 fab fa-twitter text-lg leading-lg "
-              ></i
-              ><span class="lg:hidden inline-block ml-2">Tweet</span></a
-            >
+          <li>
+            <NavigationLink label="Forum" :to="{ name: 'Forum' }" />
           </li>
-          <li class="flex items-center">
-            <a
-              class="lg:text-white lg:hover:text-gray-300 text-gray-800 px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
-              href="https://github.com/protect-earth"
-              ><i
-                class="lg:text-gray-300 text-gray-500 fab fa-github text-lg leading-lg "
-              ></i
-              ><span class="lg:hidden inline-block ml-2">Star</span></a
-            >
-          </li>
+          <li>
+            <NavigationLink label="Contribute" :to="{ name: 'Contribute' }" />
+          </li> -->
         </ul>
       </div>
     </div>
@@ -115,40 +51,13 @@
 </template>
 
 <script>
+import NavigationLink from './NavigationLink';
+
 export default {
   name: 'Navigation',
   components: {
+    NavigationLink,
     SearchBar: () => import('./search/SearchBar'),
-  },
-  data() {
-    return {
-      tags: [
-        {
-          id: 'commute',
-          tagName: 'Commuter',
-        },
-        {
-          id: 'business',
-          tagName: 'Business Owner',
-        },
-        {
-          id: 'home-owner',
-          tagName: 'Home Owner',
-        },
-        {
-          id: 'land-owner',
-          tagName: 'Land Owner',
-        },
-        {
-          id: 'nomad',
-          tagName: 'Nomad',
-        },
-        {
-          id: 'developers',
-          tagName: 'Programmer',
-        },
-      ],
-    };
   },
 };
 </script>

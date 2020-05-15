@@ -13,15 +13,16 @@
         ></span>
       </div>
       <div class="container relative mx-auto">
-        <div class="items-center flex flex-wrap">
-          <div class="w-full lg:w-7/12 px-4 ml-auto mr-auto text-center">
+        <div class="flex flex-wrap items-start mt-20 mb-10">
+          <div class="w-full lg:w-8/12 px-4">
             <div class="flex flex-col pr-12">
-              <h1 class="text-white font-semibold text-5xl">
-                Start saving the planet today.
-              </h1>
-              <p
-                class="mx-auto text-center mt-4 text-lg lg:w-10/12 text-gray-300"
+              <h1
+                class="text-white font-semibold text-4xl text-bold leading-tight"
               >
+                We must cut global emissions in half by 2030, or face
+                <em>sea level rises</em>
+              </h1>
+              <p class="mt-4 text-lg lg:w-10/12 text-gray-300">
                 Protect.Earth is a list of strategies, products, services, and
                 companies focused on sustainability and environmental
                 protection. We are faced with a global existential crisis -
