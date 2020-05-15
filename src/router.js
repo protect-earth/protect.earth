@@ -152,7 +152,8 @@ categories = categories.map(function(category) {
     name: `${category.slug}-CategoryIndex`,
     component: () =>
       import(
-        /* webpackChunkName: "SingleCategoryIndex" */ './views/category/Index'
+        /* webpackChunkName: "SingleCategoryIndex" */
+        './views/category/Index'
       ),
     props: { category: category },
   };
@@ -161,7 +162,9 @@ categories = categories.map(function(category) {
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0,
+  }),
   // Merge base routes and category routes.
   routes: routes.concat(categories),
 });
