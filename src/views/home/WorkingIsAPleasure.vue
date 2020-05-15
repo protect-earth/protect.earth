@@ -26,7 +26,6 @@
           >
             Check Tailwind Starter Kit!
           </a>
-
         </div>
         <div class="w-full md:w-4/12 px-4 mr-auto ml-auto">
           <div
@@ -50,11 +49,13 @@
                   class="text-teal-700 fill-current"
                 ></polygon>
               </svg>
-              <h4 class="text-xl font-bold text-white"> Some text here please </h4>
+              <h4 class="text-xl font-bold text-white">
+                Some text here please
+              </h4>
               <p class="text-md font-light mt-2 text-white">
                 The Arctic Ocean freezes every winter and much of the sea-ice
-                then thaws every summer, and that process will continue
-                whatever happens.
+                then thaws every summer, and that process will continue whatever
+                happens.
               </p>
             </blockquote>
           </div>
@@ -65,7 +66,7 @@
 </template>
 
 <script>
-  export default {
-    name: "WorkingIsAPleasure",
-  }
+export default {
+  name: 'WorkingIsAPleasure',
+};
 </script>

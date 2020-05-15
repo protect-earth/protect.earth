@@ -24,8 +24,8 @@
         <div class="w-full lg:w-6/12 px-4">
           <h2 class="text-4xl font-semibold text-white">Build something</h2>
           <p class="text-lg leading-relaxed mt-4 mb-4 text-gray-500">
-            Put the potentially record low maximum sea ice extent tihs year
-            down to low ice. According to the National Oceanic and Atmospheric
+            Put the potentially record low maximum sea ice extent tihs year down
+            to low ice. According to the National Oceanic and Atmospheric
             Administration, Ted, Scambos.
           </p>
         </div>
@@ -78,6 +78,6 @@
 
 <script>
 export default {
-name: "BuildSomething"
-}
+  name: 'BuildSomething',
+};
 </script>

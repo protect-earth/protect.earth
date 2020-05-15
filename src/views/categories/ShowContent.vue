@@ -3,9 +3,16 @@
     <section class="relative block" style="height: 500px;">
       <div
         class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image"
-        :style="[category && category.image && category.image.permalink? { backgroundImage: `url('${category.image.permalink}')` }: '']"
+        :style="[
+          category && category.image && category.image.permalink
+            ? { backgroundImage: `url('${category.image.permalink}')` }
+            : '',
+        ]"
       >
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+        <span
+          id="blackOverlay"
+          class="w-full h-full absolute opacity-50 bg-black"
+        ></span>
       </div>
       <div
         class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
@@ -20,7 +27,10 @@
           x="0"
           y="0"
         >
-          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          />
         </svg>
       </div>
     </section>
@@ -33,7 +43,9 @@
             <div class="mt-10 py-10 border-b border-gray-300 text-justify">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
-                  <h2 class="text-4xl font-bold">{{category && category.title}}</h2>
+                  <h2 class="text-4xl font-bold">
+                    {{ category && category.title }}
+                  </h2>
                   <p
                     class="mb-4 leading-relaxed text-gray-800 category-page-category-content"
                     v-html="category && category.content"
@@ -46,11 +58,16 @@
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
                   <ul>
-                    <li v-for="(action, index) in actions" :key="index" class="mt-6">
+                    <li
+                      v-for="(action, index) in actions"
+                      :key="index"
+                      class="mt-6"
+                    >
                       <a
                         :href="action.action_url"
                         class="mb-2 text-2xl text-bold text-blue-600"
-                      >{{ action.title }}</a>
+                        >{{ action.title }}</a
+                      >
 
                       <p v-html="action.description"></p>
                     </li>
@@ -66,7 +83,7 @@
 </template>
 
 <script>
-import Api from '../../services/api'
+import Api from '../../services/api';
 
 export default {
   name: 'CategoryShowContentPage',
@@ -75,27 +92,27 @@ export default {
 
   data: () => ({
     actions: [],
-    category: null
+    category: null,
   }),
 
   mounted() {
-    this.showCategory().then(() => this.getActions())
+    this.showCategory().then(() => this.getActions());
   },
 
   methods: {
     showCategory() {
       return Api.showCategoryWithSlug(this.categorySlug).then(category => {
-        this.category = category
-      })
+        this.category = category;
+      });
     },
 
     getActions() {
       Api.getActionsWithCategory(this.category.id).then(({ data }) => {
-        this.actions = [...data]
-      })
-    }
-  }
-}
+        this.actions = [...data];
+      });
+    },
+  },
+};
 </script>
 
 <style>

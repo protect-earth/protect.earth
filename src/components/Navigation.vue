@@ -44,7 +44,7 @@
               size="sm"
               :visible-arrow="false"
               :button-props="{
-                baseClass: `border block rounded inline-flex items-center justify-center`
+                baseClass: `border block rounded inline-flex items-center justify-center`,
               }"
             >
               <template v-slot:button-content>
@@ -66,7 +66,7 @@
                   <router-link
                     :to="{
                       name: 'TagShow',
-                      params: { tagSlug: tag.id }
+                      params: { tagSlug: tag.id },
                     }"
                     href="#"
                     class="block no-underline px-4 py-2 hover:bg-pink-600 hover:text-white"
@@ -118,39 +118,39 @@
 export default {
   name: 'Navigation',
   components: {
-    SearchBar: () => import('./search/SearchBar')
+    SearchBar: () => import('./search/SearchBar'),
   },
   data() {
     return {
       tags: [
         {
           id: 'commute',
-          tagName: 'Commuter'
+          tagName: 'Commuter',
         },
         {
           id: 'business',
-          tagName: 'Business Owner'
+          tagName: 'Business Owner',
         },
         {
           id: 'home-owner',
-          tagName: 'Home Owner'
+          tagName: 'Home Owner',
         },
         {
           id: 'land-owner',
-          tagName: 'Land Owner'
+          tagName: 'Land Owner',
         },
         {
           id: 'nomad',
-          tagName: 'Nomad'
+          tagName: 'Nomad',
         },
         {
           id: 'developers',
-          tagName: 'Programmer'
-        }
-      ]
-    }
-  }
-}
+          tagName: 'Programmer',
+        },
+      ],
+    };
+  },
+};
 </script>
 
 <style></style>

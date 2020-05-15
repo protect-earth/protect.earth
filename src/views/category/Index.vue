@@ -23,7 +23,7 @@
             class="image-left-side absolute top-0 right-0 w-3/4 h-full bg-cover bg-center background-gray-300 rounded-md shadow-lg"
             :style="{
               backgroundImage:
-                'url(\'' + (cat.image ? cat.image.permalink : '') + '\')'
+                'url(\'' + (cat.image ? cat.image.permalink : '') + '\')',
             }"
             role="img"
             aria-label=""
@@ -120,7 +120,7 @@
 </template>
 
 <script>
-import api from './../../services/api.js'
+import api from './../../services/api.js';
 
 export default {
   name: 'SingleCategoryIndex',
@@ -128,44 +128,44 @@ export default {
   props: {
     category: {
       type: Object,
-      required: true
-    }
+      required: true,
+    },
   },
 
   components: {
     Navigation: () => import('./../../components/Navigation'),
     //Action: () => import('./../../components/listing/Action'),
-    PageFooter: () => import('./../../components/Footer')
+    PageFooter: () => import('./../../components/Footer'),
   },
 
   data() {
     return {
       cat: null,
       featured: null,
-      actions: null
-    }
+      actions: null,
+    };
   },
 
   mounted() {
-    var self = this
+    var self = this;
 
     // Load category information.
     api.showCategoryWithSlug(this.category.slug).then(function(response) {
-      self.cat = response
-    })
+      self.cat = response;
+    });
 
     // Load all actions for this category.
     api.getActionsWithCategory(this.category.id).then(function(response) {
       // Split actions into featured/regular.
       self.featured = response.data.filter(function(action) {
-        return action.featured
-      })
+        return action.featured;
+      });
       self.actions = response.data.filter(function(action) {
-        return !action.featured
-      })
-    })
+        return !action.featured;
+      });
+    });
   },
 
-  methods: {}
-}
+  methods: {},
+};
 </script>

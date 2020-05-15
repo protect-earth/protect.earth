@@ -1,4 +1,4 @@
-import Vue from 'vue'
-import VueTailwind from 'vue-tailwind'
+import Vue from 'vue';
+import VueTailwind from 'vue-tailwind';
 
-Vue.use(VueTailwind)
+Vue.use(VueTailwind);

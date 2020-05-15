@@ -14,25 +14,25 @@ export default {
 
   metaInfo() {
     return {
-      title: `Links tagged with ${this.tagSlug}`
-    }
+      title: `Links tagged with ${this.tagSlug}`,
+    };
   },
 
   components: {
     Navigation: () => import('./../../components/Navigation'),
     PageFooter: () => import('./../../components/Footer'),
-    TagsMain: () => import('./TagsMain')
+    TagsMain: () => import('./TagsMain'),
   },
 
   data: () => ({
     tagName: '',
-    publicPath: process.env.BASE_URL
+    publicPath: process.env.BASE_URL,
   }),
 
   computed: {
     tagSlug: function() {
-      return this.$route.params.tagSlug
-    }
-  }
-}
+      return this.$route.params.tagSlug;
+    },
+  },
+};
 </script>

@@ -1,30 +1,27 @@
 <template>
   <div class="text-gray-800 antialiased">
-
-    <navigation/>
+    <navigation />
 
     <actions-main></actions-main>
 
-    <page-footer/>
-
+    <page-footer />
   </div>
 </template>
 
 <script>
-  export default {
-    name: 'ActionIndex',
+export default {
+  name: 'ActionIndex',
 
-    metaInfo() {
-      return {
-        title: `Actions`,
-      }
-    },
+  metaInfo() {
+    return {
+      title: `Actions`,
+    };
+  },
 
-    components: {
-      ActionsMain: () => import('./ActionsMain'),
-      Navigation: () => import('./../../components/Navigation'),
-      PageFooter: () => import('./../../components/Footer'),
-    },
-
-  }
+  components: {
+    ActionsMain: () => import('./ActionsMain'),
+    Navigation: () => import('./../../components/Navigation'),
+    PageFooter: () => import('./../../components/Footer'),
+  },
+};
 </script>

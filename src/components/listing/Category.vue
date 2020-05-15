@@ -15,8 +15,12 @@
         <div class="mt-6">
           <router-link
             class="bg-gray-900 text-white active:bg-gray-700 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1"
-            :to="{ name: `CategoryShow`, params: { categorySlug: category.slug }}"
-          >Act now</router-link>
+            :to="{
+              name: `CategoryShow`,
+              params: { categorySlug: category.slug },
+            }"
+            >Act now</router-link
+          >
         </div>
       </template>
     </base-photo-card>
@@ -24,7 +28,7 @@
 </template>
 
 <script>
-import Strings from './../../services/strings'
+import Strings from './../../services/strings';
 
 export default {
   name: 'ListingCategory',
@@ -33,24 +37,23 @@ export default {
 
   computed: {
     cleanCategories: function() {
-      let cleanCat = []
+      let cleanCat = [];
       this.categories.forEach((cat, idx) => {
         cleanCat[idx] = {
           title: cat.title || 'No title',
           intro: cat.intro || 'No intro',
           image: cat.image || { permalink: '' },
-          slug: cat.slug || 'no-slug'
-        }
-      })
-      return cleanCat
-    }
+          slug: cat.slug || 'no-slug',
+        };
+      });
+      return cleanCat;
+    },
   },
 
   filters: {
-    introText: Strings.introText
-  }
-}
+    introText: Strings.introText,
+  },
+};
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>

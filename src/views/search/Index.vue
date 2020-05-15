@@ -1,31 +1,31 @@
 <template>
-    <div class="text-gray-800 antialiased">
-        <navigation />
+  <div class="text-gray-800 antialiased">
+    <navigation />
 
-        <search-main />
+    <search-main />
 
-        <page-footer />
-    </div>
+    <page-footer />
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'SearchIndex',
+  name: 'SearchIndex',
 
-    metaInfo() {
-        return {
-            title: `Search for the actions`
-        }
-    },
+  metaInfo() {
+    return {
+      title: `Search for the actions`,
+    };
+  },
 
-    components: {
-        Navigation: () => import('./../../components/Navigation'),
-        PageFooter: () => import('./../../components/Footer'),
-        SearchMain: () => import('./SearchMain')
-    },
+  components: {
+    Navigation: () => import('./../../components/Navigation'),
+    PageFooter: () => import('./../../components/Footer'),
+    SearchMain: () => import('./SearchMain'),
+  },
 
-    data: () => ({
-        publicPath: process.env.BASE_URL
-    })
-}
+  data: () => ({
+    publicPath: process.env.BASE_URL,
+  }),
+};
 </script>

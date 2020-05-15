@@ -15,6 +15,6 @@ const htmlContent = `
       footprint, offsetting the remaining footprint for barely any money, and reducing the insane
       amounts of waste we all cause, our kids might have a chance.
     </p>
-  `
+  `;
 
-export default htmlContent
+export default htmlContent;

@@ -38,17 +38,17 @@
             <h3 class="text-3xl font-semibold">A growing company</h3>
             <p class="mt-4 text-lg leading-relaxed text-gray-600">
               The extension comes with three pre-built pages to help you get
-              started faster. You can change the text and images and you're
-              good to go.
+              started faster. You can change the text and images and you're good
+              to go.
             </p>
             <ul class="list-none mt-6">
               <li class="py-2">
                 <div class="flex items-center">
                   <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                    <span
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
                       ><i class="fas fa-fingerprint"></i
-                      ></span>
+                    ></span>
                   </div>
                   <div>
                     <h4 class="text-gray-600">
@@ -60,10 +60,10 @@
               <li class="py-2">
                 <div class="flex items-center">
                   <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                    <span
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
                       ><i class="fab fa-html5"></i
-                      ></span>
+                    ></span>
                   </div>
                   <div>
                     <h4 class="text-gray-600">Amazing page examples</h4>
@@ -73,10 +73,10 @@
               <li class="py-2">
                 <div class="flex items-center">
                   <div>
-                      <span
-                        class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
+                    <span
+                      class="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-pink-600 bg-pink-200 mr-3"
                       ><i class="far fa-paper-plane"></i
-                      ></span>
+                    ></span>
                   </div>
                   <div><h4 class="text-gray-600">Dynamic components</h4></div>
                 </div>
@@ -90,7 +90,7 @@
 </template>
 
 <script>
-  export default {
-    name: "AGrowingCompany",
-  }
+export default {
+  name: 'AGrowingCompany',
+};
 </script>

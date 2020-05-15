@@ -1,8 +1,13 @@
 <template>
   <main class="profile-page">
     <section class="relative block" style="height: 500px;">
-      <div class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image">
-        <span id="blackOverlay" class="w-full h-full absolute opacity-50 bg-black"></span>
+      <div
+        class="absolute top-0 w-full h-full bg-center bg-cover bg-hero-image"
+      >
+        <span
+          id="blackOverlay"
+          class="w-full h-full absolute opacity-50 bg-black"
+        ></span>
       </div>
       <div
         class="top-auto bottom-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden"
@@ -17,7 +22,10 @@
           x="0"
           y="0"
         >
-          <polygon class="text-gray-300 fill-current" points="2560 0 2560 100 0 100" />
+          <polygon
+            class="text-gray-300 fill-current"
+            points="2560 0 2560 100 0 100"
+          />
         </svg>
       </div>
     </section>
@@ -29,7 +37,9 @@
           <div class="px-6">
             <div class="mt-10 py-10 border-b border-gray-300 text-justify">
               <div class="flex flex-wrap justify-center">
-                <div class="w-full lg:w-9/12 px-4 text-4xl font-bold uppercase">{{tagSlug}}</div>
+                <div class="w-full lg:w-9/12 px-4 text-4xl font-bold uppercase">
+                  {{ tagSlug }}
+                </div>
               </div>
             </div>
 
@@ -37,11 +47,16 @@
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
                   <ul>
-                    <li v-for="(action, index) in actions" :key="index" class="mt-6">
+                    <li
+                      v-for="(action, index) in actions"
+                      :key="index"
+                      class="mt-6"
+                    >
                       <a
                         :href="action.action_url"
                         class="mb-2 text-2xl text-bold text-blue-600"
-                      >{{ action.title }}</a>
+                        >{{ action.title }}</a
+                      >
 
                       <p v-html="action.description"></p>
                     </li>
@@ -57,7 +72,7 @@
 </template>
 
 <script>
-import Api from '../../services/api'
+import Api from '../../services/api';
 
 export default {
   name: 'TagsMain',
@@ -65,25 +80,25 @@ export default {
   props: ['tagName'],
 
   data: () => ({
-    actions: []
+    actions: [],
   }),
 
   mounted() {
-    this.getActions()
+    this.getActions();
   },
 
   computed: {
     tagSlug: function() {
-      return this.$route.params.tagSlug
-    }
+      return this.$route.params.tagSlug;
+    },
   },
 
   methods: {
     getActions() {
       Api.getActionsWithTag(this.tagName).then(({ data }) => {
-        this.actions = [...data]
-      })
-    }
-  }
-}
+        this.actions = [...data];
+      });
+    },
+  },
+};
 </script>

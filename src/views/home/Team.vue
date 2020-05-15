@@ -162,7 +162,7 @@
 </template>
 
 <script>
-  export default {
-    name: "Team",
-  }
+export default {
+  name: 'Team',
+};
 </script>

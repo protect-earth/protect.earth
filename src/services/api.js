@@ -1,7 +1,6 @@
-const baseApiUrl = process.env.VUE_APP_API_BASE_URL
+const baseApiUrl = process.env.VUE_APP_API_BASE_URL;
 
 export default {
-
   /**
    * Get actions that contains provided category Id.
    *
@@ -9,11 +8,11 @@ export default {
    * @returns {Promise<any>}
    */
   getActionsWithCategory(categoryId) {
+    const queryParams = `filter[categories:contains]=${categoryId}&filter[status:equals]=published`;
 
-    const queryParams = `filter[categories:contains]=${categoryId}&filter[status:equals]=published`
-
-    return fetch(`${baseApiUrl}/api/collections/actions/entries?${queryParams}`)
-      .then(r => r.json())
+    return fetch(
+      `${baseApiUrl}/api/collections/actions/entries?${queryParams}`
+    ).then(r => r.json());
   },
 
   /**
@@ -23,11 +22,11 @@ export default {
    * @returns {Promise<any>}
    */
   getActionsWithTag(tagSlug) {
+    const queryParams = `filter[tags:contains]=${tagSlug}&filter[status:equals]=published`;
 
-    const queryParams = `filter[tags:contains]=${tagSlug}&filter[status:equals]=published`
-
-    return fetch(`${baseApiUrl}/api/collections/actions/entries?${queryParams}`)
-      .then(r => r.json())
+    return fetch(
+      `${baseApiUrl}/api/collections/actions/entries?${queryParams}`
+    ).then(r => r.json());
   },
 
   /**
@@ -36,8 +35,9 @@ export default {
    * @returns {Promise<any>}
    */
   getCategories() {
-    return fetch(`${baseApiUrl}/api/collections/categories/entries`)
-      .then(r => r.json())
+    return fetch(`${baseApiUrl}/api/collections/categories/entries`).then(r =>
+      r.json()
+    );
   },
 
   /**
@@ -47,11 +47,11 @@ export default {
    * @returns {Promise<any>}
    */
   getRecentActions(amount = 3) {
+    const queryParams = `filter[status:equals]=published&limit=${amount}&sort=-date`;
 
-    const queryParams = `filter[status:equals]=published&limit=${amount}&sort=-date`
-
-    return fetch(`${baseApiUrl}/api/collections/actions/entries?${queryParams}`)
-      .then(r => r.json())
+    return fetch(
+      `${baseApiUrl}/api/collections/actions/entries?${queryParams}`
+    ).then(r => r.json());
   },
 
   /**
@@ -61,15 +61,15 @@ export default {
    * @returns {Promise<any>}
    */
   showCategoryWithSlug(categorySlug) {
-    return fetch(`${baseApiUrl}/api/collections/categories/entries?filter[slug:equals]=${categorySlug}`)
+    return fetch(
+      `${baseApiUrl}/api/collections/categories/entries?filter[slug:equals]=${categorySlug}`
+    )
       .then(r => r.json())
-      .then(({
-        data
-      }) => {
+      .then(({ data }) => {
         if (data.length !== 1) {
-          return null
+          return null;
         }
-        return data[0]
-      })
+        return data[0];
+      });
   },
-}
+};

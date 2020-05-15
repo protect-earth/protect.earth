@@ -23,19 +23,19 @@
 </template>
 
 <script>
-import HeroWithCards from './HeroWithCards'
-import WorkingIsAPleasure from './WorkingIsAPleasure'
-import AGrowingCompany from './AGrowingCompany'
-import Team from './Team'
-import BuildSomething from './BuildSomething'
-import WorkWithUs from './WorkWithUs'
-import DisplayCategories from './DisplayCategories'
+import HeroWithCards from './HeroWithCards';
+import WorkingIsAPleasure from './WorkingIsAPleasure';
+import AGrowingCompany from './AGrowingCompany';
+import Team from './Team';
+import BuildSomething from './BuildSomething';
+import WorkWithUs from './WorkWithUs';
+import DisplayCategories from './DisplayCategories';
 
 export default {
   name: 'HomeIndex',
 
   metaInfo: {
-    title: 'Welcome'
+    title: 'Welcome',
   },
 
   components: {
@@ -47,7 +47,7 @@ export default {
     WorkingIsAPleasure,
     HeroWithCards,
     Navigation: () => import('./../../components/Navigation'),
-    PageFooter: () => import('./../../components/Footer')
-  }
-}
+    PageFooter: () => import('./../../components/Footer'),
+  },
+};
 </script>

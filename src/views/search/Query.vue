@@ -1,35 +1,37 @@
 <template>
-    <div class="text-gray-800 antialiased">
-        <navigation />
+  <div class="text-gray-800 antialiased">
+    <navigation />
 
-        <search-main v-bind:searchTerm="searchTerm" />
+    <search-main v-bind:searchTerm="searchTerm" />
 
-        <page-footer />
-    </div>
+    <page-footer />
+  </div>
 </template>
 
 <script>
 export default {
-    name: 'SearchQuery',
+  name: 'SearchQuery',
 
-    metaInfo() {
-        return {
-            title: `Search results for ${this.searchTerm}`
-        }
+  metaInfo() {
+    return {
+      title: `Search results for ${this.searchTerm}`,
+    };
+  },
+
+  components: {
+    Navigation: () => import('./../../components/Navigation'),
+    PageFooter: () => import('./../../components/Footer'),
+    SearchMain: () => import('./SearchMain'),
+  },
+
+  data: () => ({
+    publicPath: process.env.BASE_URL,
+  }),
+
+  computed: {
+    searchTerm: function() {
+      return this.$route.params.searchTerm;
     },
-
-    components: {
-        Navigation: () => import('./../../components/Navigation'),
-        PageFooter: () => import('./../../components/Footer'),
-        SearchMain: () => import('./SearchMain')
-    },
-
-    data: () => ({
-        publicPath: process.env.BASE_URL
-    }),
-
-    computed: {
-        searchTerm: function() { return this.$route.params.searchTerm;}
-    }
-}
+  },
+};
 </script>
