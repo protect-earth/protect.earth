@@ -33,10 +33,10 @@
             <div class="mt-10 py-10 border-b border-gray-300 text-justify">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
-                  <h2 class="text-4xl font-bold uppercase">{{category && category.title}}</h2>
+                  <h2 class="text-4xl font-bold">{{category && category.title}}</h2>
                   <p
-                    class="mb-4 text-lg leading-relaxed text-gray-800"
-                    v-html="category && category.body"
+                    class="mb-4 leading-relaxed text-gray-800 category-page-category-content"
+                    v-html="category && category.content"
                   />
                 </div>
               </div>
@@ -97,3 +97,14 @@ export default {
   }
 }
 </script>
+
+<style>
+.category-page-category-content p {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.category-page-category-content ul {
+  list-style: disc;
+  padding-inline-start: 2em;
+}
+</style>
