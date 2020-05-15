@@ -27,36 +27,21 @@
           class="relative flex flex-col min-w-0 break-words bg-white w-full mb-6 shadow-xl rounded-lg -mt-64"
         >
           <div class="px-6">
-            <div class="flex flex-wrap justify-center">
-              <div class="w-full lg:w-3/12 px-4 lg:order-2 flex justify-center">
-                <div class="relative">
-                  <img
-                    alt="..."
-                    :src="category && category.image && category.image.permalink"
-                    class="shadow-xl rounded-full h-auto align-middle border-none absolute -m-16 -ml-20 lg:-ml-16"
-                    style="max-width: 150px;"
-                  />
-                </div>
-              </div>
-            </div>
-            <div class="mt-10 py-10 border-t border-gray-300 text-justify">
+            <div class="mt-10 py-10 border-b border-gray-300 text-justify">
               <div class="flex flex-wrap justify-center">
-                <div class="w-full lg:w-9/12 px-4">
-                  <p
-                    class="mb-4 text-lg leading-relaxed text-gray-800"
-                    v-html="category && category.body"
-                  />
-                  <a href="#" class="font-normal text-pink-500">Do something about it</a>
-                </div>
+                <div class="w-full lg:w-9/12 px-4 text-4xl font-bold uppercase">{{tagSlug}}</div>
               </div>
             </div>
 
-            <div class="mt-10 py-10 text-justify">
+            <div class="mb-10 py-10 text-justify">
               <div class="flex flex-wrap justify-center">
                 <div class="w-full lg:w-9/12 px-4">
                   <ul>
                     <li v-for="(action, index) in actions" :key="index" class="mt-6">
-                      <p class="mb-2 text-lg text-bold text-blue-600">{{ action.title }}</p>
+                      <a
+                        :href="action.action_url"
+                        class="mb-2 text-lg text-bold text-blue-600"
+                      >{{ action.title }}</a>
 
                       <p v-html="action.description"></p>
                     </li>
@@ -80,18 +65,22 @@ export default {
   props: ['tagName'],
 
   data: () => ({
-    actions: [],
-    category: null
+    actions: []
   }),
 
   mounted() {
     this.getActions()
   },
 
+  computed: {
+    tagSlug: function() {
+      return this.$route.params.tagSlug
+    }
+  },
+
   methods: {
     getActions() {
       Api.getActionsWithTag(this.tagName).then(({ data }) => {
-        console.log(data)
         this.actions = [...data]
       })
     }
