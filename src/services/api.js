@@ -17,6 +17,20 @@ export default {
   },
 
   /**
+   * Get actions that contains provided category Id.
+   *
+   * @param tagSlug
+   * @returns {Promise<any>}
+   */
+  getActionsWithTag(tagSlug) {
+
+    const queryParams = `filter[tags:contains]=${tagSlug}&filter[status:equals]=published`
+
+    return fetch(`${baseApiUrl}/api/collections/actions/entries?${queryParams}`)
+      .then(r => r.json())
+  },
+
+  /**
    * Gets the categories listing.
    *
    * @returns {Promise<any>}
