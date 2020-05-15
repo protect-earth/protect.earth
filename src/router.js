@@ -4,67 +4,66 @@ import Router from 'vue-router'
 Vue.use(Router)
 
 // Base routes.
-const routes = [
-  {
+const routes = [{
     path: '/',
     name: 'Home',
-    component: () => import(/* webpackChunkName: "Home" */ './views/home/Index')
+    component: () => import( /* webpackChunkName: "Home" */ './views/home/Index')
   },
   {
     path: '/about',
     name: 'About',
     component: () =>
-      import(/* webpackChunkName: "About" */ './views/about/Index')
+      import( /* webpackChunkName: "About" */ './views/about/Index')
   },
   {
     path: '/storybook-alike',
     name: 'StorybookAlike',
     component: () =>
       import(
-        /* webpackChunkName: "StorybookAlike" */ './views/storybookalike/Index'
+        /* webpackChunkName: "StorybookAlike" */
+        './views/storybookalike/Index'
       )
   },
   {
     path: '/tags',
     name: 'TagIndex',
     component: () =>
-      import(/* webpackChunkName: "TagIndex" */ './views/tags/Index')
+      import( /* webpackChunkName: "TagIndex" */ './views/tags/Index')
   },
   {
     path: '/tags/:tagSlug',
     name: 'TagShow',
     component: () =>
-      import(/* webpackChunkName: "TagShow" */ './views/tags/Show')
+      import( /* webpackChunkName: "TagShow" */ './views/tags/Show')
   },
   {
     path: '/categories',
     name: 'CategoryIndex',
     component: () =>
-      import(/* webpackChunkName: "CategoryIndex" */ './views/categories/Index')
-  },
-  {
-    path: '/category/:categorySlug',
-    name: 'CategoryShow',
-    component: () =>
-      import(/* webpackChunkName: "CategoryShow" */ './views/categories/Show')
+      import( /* webpackChunkName: "CategoryIndex" */ './views/categories/Index')
   },
   {
     path: '/search',
     name: 'SearchIndex',
     component: () =>
-      import(/* webpackChunkName: "SearchIndex" */ './views/search/Index')
+      import( /* webpackChunkName: "SearchIndex" */ './views/search/Index')
   },
   {
     path: '/search/:searchTerm',
     name: 'SearchQuery',
     component: () =>
-      import(/* webpackChunkName: "SearchQuery" */ './views/search/Query')
-  }
+      import( /* webpackChunkName: "SearchQuery" */ './views/search/Query')
+  },
+  {
+    path: '/:categorySlug',
+    name: 'CategoryShow',
+    component: () =>
+      import( /* webpackChunkName: "CategoryShow" */ './views/categories/Show')
+  },
 ]
 
 // Array of information for all categories in the API.
-let categories = [
-  {
+let categories = [{
     id: '207559a4-fe66-4c3d-bc6c-4f721f9562a4',
     slug: 'carbon-reduction'
   },
@@ -143,22 +142,27 @@ let categories = [
 ]
 
 // Create router objects for each category.
-categories = categories.map(function(category) {
+categories = categories.map(function (category) {
   return {
     path: '/' + category.slug,
     name: `${category.slug}-CategoryIndex`,
     component: () =>
       import(
-        /* webpackChunkName: "SingleCategoryIndex" */ './views/category/Index'
+        /* webpackChunkName: "SingleCategoryIndex" */
+        './views/category/Index'
       ),
-    props: { category: category }
+    props: {
+      category: category
+    }
   }
 })
 
 const router = new Router({
   mode: 'history',
   base: process.env.BASE_URL,
-  scrollBehavior: () => ({ y: 0 }),
+  scrollBehavior: () => ({
+    y: 0
+  }),
   // Merge base routes and category routes.
   routes: routes.concat(categories)
 })
