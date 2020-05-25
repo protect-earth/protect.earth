@@ -96,8 +96,5 @@ export default () => (
         </Col>
       </Row>
     </Container>
-    <Container>
-      <SuggestionForm />
-    </Container>
   </Layout>
 );
