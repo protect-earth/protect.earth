@@ -50,19 +50,6 @@ export default () => (
               panels and buying a bicycle).
             </p>
 
-            <p>
-              Reducing and offsetting is the dream combination. For example, the
-              average meat-based diet causes ~2.3 tCO2e and an average
-              plant-based vegan diet is ~1.3 tCO2e. If you switch from
-              meta-based diet to veganism then that's a huge, important step
-              towards a 5 tCO2 footprint, but there is still 1.3 tCO2e that
-              could be offset. Everything we do has an emissions cost, even
-              buying a bicycle and getting it delivered has a footprint, so
-              tracking what your footprint is then actively seeking the
-              reduction of that over time, within the UN recommended deadlines
-              or before.
-            </p>
-
             <ul>
               <li>
                 <a href="/tags/track">track</a> your carbon footprint
@@ -105,16 +92,6 @@ export default () => (
                 gravity of the problems we're solving
               </li>
             </ul>
-
-            <p>
-              Relying on one step of the plan or squabbling about which ones are
-              good or bad will lead to confusion and inaction. We definitely
-              want people to be offsetting their footprint, so long as that the
-              messaging is clear: offsetting is not a free pass top continue
-              living a polluting life, but it is a valuable tool to balance your
-              remaining footprint whilst you make drastic reductions month by
-              month.{' '}
-            </p>
           </>
         </Col>
       </Row>
