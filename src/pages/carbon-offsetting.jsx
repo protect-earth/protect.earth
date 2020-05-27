@@ -187,8 +187,8 @@ export default () => (
 
           <p>
             Airlines aren't the only polluting industry excited to market
-            offsetting as a solution to their bad press, petrol stations are
-            getting in on the greenwashing too.
+            offsetting as a cheap pseudo-solution to get better press, petrol
+            stations are getting in on the greenwashing too.
           </p>
 
           <img
