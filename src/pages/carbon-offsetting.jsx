@@ -558,6 +558,7 @@ export default () => (
           <img
             src={imgPieChart}
             alt="Offset.Earth advertise their split as 87.5% to offsetting and tree planting, and 12.5% to operational costs"
+            style={{ width: '100%' }}
           />
 
           <p>
