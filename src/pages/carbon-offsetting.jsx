@@ -5,8 +5,9 @@ import Col from 'react-bootstrap/Col';
 import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 
-import imgFootprint from '../images/guides/footprint-example.png';
-import imgShell from '../images/guides/shell-greenwash.jpg';
+import imgFootprint from '../images/carbon-offsetting/footprint-example.png';
+import imgShell from '../images/carbon-offsetting/shell-greenwash.jpg';
+import imgPieChart from '../images/carbon-offsetting/offsetting-operational.png';
 
 export default () => (
   <Layout title="Carbon Offsetting">
@@ -26,11 +27,25 @@ export default () => (
           <h1>Is "Carbon Offsetting" Good or Bad?</h1>
 
           <p>
-            Depending on who you talk to, it might be touted as the solution to
-            all the worlds problems, greenwashing, fraud, a distraction which
-            perpetuates the status quo and hampers real climate action, or a
-            complex grey area which needs a bit of explanation to understand
-            properly. Let's explain why people are so divided.
+            Depending on who you talk to, it might be touted as{' '}
+            <a href="https://www.economist.com/briefing/2020/05/21/carbon-offsetting-is-essential-to-tackling-climate-change">
+              essential
+            </a>
+            ,{' '}
+            <a href="https://theenergymix.com/2019/11/15/surging-market-for-carbon-offsets-raises-spectre-of-greenwashing/">
+              greenwashing
+            </a>
+            ,{' '}
+            <a href="https://academicflyingblog.wordpress.com/2020/02/04/we-dont-need-aviation-offsets-institutions-and-individuals-can-own-their-carbon-emissions/">
+              fraud
+            </a>
+            , a distraction which perpetuates the status quo and hampers real
+            climate action, or{' '}
+            <a href="https://www.yaleclimateconnections.org/2019/05/are-carbon-offsets-a-scam/">
+              a complex grey area which involves a lot of "it depends"
+            </a>
+            . Let's explain why people are so very divided on this topic, in the
+            hope of helping you decide if you'll use carbon offsetting or not.
           </p>
 
           <p>
@@ -87,9 +102,10 @@ export default () => (
 
           <p>
             Planting only seven acres of "new forest" - which is basically 7
-            soccer pitches - will do basically nothing for the environment,
-            definitely not support the continued operation of an entire fleet of
-            aircraft. Ryan Air also had an advertisement banned over{' '}
+            soccer pitches - will take decades to barely scratch the surface of
+            their carbon footprint, and definitely not support the continued
+            operation of an entire fleet of aircraft. Ryan Air also had an
+            advertisement banned over{' '}
             <a href="https://www.theguardian.com/business/2020/feb/05/ryanair-accused-of-greenwash-over-carbon-emissions-claim">
               greenwashing for exaggerating having the lowest carbon emissions
             </a>{' '}
@@ -143,18 +159,22 @@ export default () => (
             , and 100% of the world are involved in that. The price is
             unrealistically low due to taxpayers subsidizing the costs, and why
             should we all pay for 15% of people to jet about on fancy holidays,
-            putting all of our health and existence at risk.
+            putting all of our health and existence at risk?
           </p>
 
           <p>
             Offsetting cannot make flying sustainable, and airlines suggesting
             so are just trying fix their reputation with the increasingly
-            climate-conscious public, and are doing so by passing the cost on to
-            you. They might pocket your money by doing literally nothing, or
-            maybe they'll do "not enough" with it, but offsetting definitely is
-            not the answer here. We need an aviation carbon tax or at the very
-            least a "frequent flier tax", which will raise flying to a realistic
-            price and in turn provide funding for electric trains.{' '}
+            climate-conscious public by passing the cost on to them. Airlines
+            might pocket your money by doing literally nothing climate related,
+            or they might do next to nothing, but even if they were spending
+            100% of the money on legitimate projects there aren't enough in the
+            world to support the growing aviation industry. We need to stop
+            subsidizing the industry, and add an aviation carbon tax - or at the
+            very least a "frequent flier tax". Either approach will raise the
+            cost of flying to a more realistic price and in turn provide funding
+            for electric trains, to help reduce the amount of flights fairly,
+            whilst still empowering people to travel.
           </p>
 
           <p>
@@ -178,11 +198,12 @@ export default () => (
           />
 
           <p>
-            Just because the polluting industries support offsetting, doesn't
-            make offsetting a bad idea. They're generally pushing a weak
-            unprovable cheap version of it to benefit their marketing more than
-            anything else. To avoid getting caught out, they generally like to
-            push the least provable approaches to offsetting too.
+            Just because the polluting industries claim to support offsetting,
+            it doesn't mean offsetting is a bad idea. They're generally pushing
+            a weak, unprovable, and cheap version of it to greenwash their
+            marketing more than anything else. To avoid getting caught out, they
+            generally like to push the least provable approaches to offsetting
+            too.
           </p>
 
           <h2 id="morethanjusttrees">More Than Just Trees</h2>
@@ -190,14 +211,14 @@ export default () => (
           <p>
             Some organizations offering to offset CO2 will only talk about
             trees, and this is a bit of a problem. For starters, reforestation
-            is the most difficult approach to regulate. Survival rate of the
-            trees from weather, beetles, disease, mold, ivy, deer, rabbits, etc
-            is hard to prove. Care can be taken to protect against many of these
-            impacts, but that costs money, so you need a reforestation that
-            actively cares about the outcome, instead of one which is trying to
-            make a bit of money from peoples guilt, and you need to be sure
-            they're not going to clear cut those trees in 10 years. There are a
-            lot of{' '}
+            is the most difficult approach to regulate. Survival rate of trees
+            varies widely due to weather, pests, diseases, competing grasses,
+            pollution, and nutrient imbalances. Care can be taken to protect
+            against many of these impacts, but that takes money and expertise,
+            so you need a reforestation team that actively cares about the
+            outcome, instead of one which is trying to make a bit of money from
+            peoples guilt, and you need to be sure they're not going to clear
+            cut those trees in 10 years. There are a lot of{' '}
             <a href="https://plantit2020.org/pdf/Scams_Short_Edited.pdf">
               scams in the reforestation space
             </a>
@@ -243,9 +264,9 @@ export default () => (
             building, build tree-houses for all the inhabitants, reforest every
             village square, cricket field, somehow find a way to plant trees in
             mountain tops and lakes, then protect them all from beetles, deer,
-            rabbits, and birds from eating all the seeds, we'd still be 13%
-            short due to existing forest cover which we certainly wouldn't want
-            to level and plant fresh...
+            rabbits, and birds from eating all the seeds. With all of that we'd
+            still be 13% short due to existing forest cover which we certainly
+            wouldn't want to level and plant fresh...
           </p>
 
           <p>
@@ -254,7 +275,7 @@ export default () => (
             levels, so they reforest Madagasgar, Nepal, Kenya, and other
             countries which absolutely need it, but those trees are going to
             take too long to soak up all the emissions we're spitting out now,
-            and we need levels to drop substantially by 2030 not 2100.
+            and we need levels to drop substantially by 2030, not 2100.
           </p>
 
           <p>
@@ -274,7 +295,11 @@ export default () => (
             For example, <a href="https://offset.earth/">Offset Earth</a> do
             support reforestation projects such as{' '}
             <a href="https://edenprojects.org/">Eden Reforestation</a>, but they
-            also support Gold Standard certified projects like these:
+            also support{' '}
+            <a href="https://registry.goldstandard.org/projects">
+              Gold Standard
+            </a>{' '}
+            certified projects like these:
           </p>
 
           <ul>
@@ -322,66 +347,67 @@ export default () => (
           </p>
 
           <p>
-            Another interesting approach is directly capturing carbon dioxide
-            from the air is another interesting approach which seems to be
-            slowly improving over time, with
-            <a href="">Climeworks</a> https://climeworks.shop/) offering a
-            monthly subscription to back their project, which is about €50 a
-            month to remove 0.6 tonnes from the environment, which over could
-            wipe out 7.2 tonnes for €800. Are you willing to pay €800 a month to
-            offset most of your footprint?
+            Directly capturing carbon dioxide from the air is another
+            interesting approach which seems to be slowly improving over time,
+            with
+            <a href="https://climeworks.shop/">Climeworks</a> offering a monthly
+            subscription to back their project. This subscription is about €50 a
+            month to remove 0.6 tonnes from the environment, which over the year
+            could wipe out 7.2 tonnes for the price of €800. Are you willing to
+            pay €800 a month to offset only most of your footprint?
           </p>
 
           <p>
-            Sending money to projects like this is solving problems around the
-            world, reducing and trapping emissions, and hopefully if they all
-            scale enough through any means then we'll see emissions drop, but
-            most people cannot afford to offset the amount they actually
-            produce: because we all produce too much CO2e and offsetting it
-            fully and legitimately is expensive.{' '}
+            Sending money to projects like this is reducing and trapping
+            emissions around the world. Hopefully, if these projects scale
+            enough, then we'll see emissions drop. Unfortunately, most people
+            cannot afford to offset the amount they actually produce because we
+            all produce too much CO2e, and offsetting it fully, and legitimately
+            is expensive.
           </p>
 
           <h2 id="reducingvsoffsetting">Reducing vs Offsetting</h2>
 
           <p>
-            Most of the problems folks have with offsetting stems from some
-            companies (usually the greenwashers) pretending that we can just pay
-            a little money, continue driving, continue flying, and continue
-            eating an overly meat-rich diet, and we completely agree there.
+            We agree with the biggest of the problems folks have with
+            offsetting: companies (usually the greenwashers) pretend that we can
+            just pay a little money, continue driving, continue flying, and
+            continue eating an overly meat-rich diet, and that's just not true
+            at all.
           </p>
 
           <p>
             There's only so many rocket stoves, wind farms, and biodigesters we
-            can give to folks before those sources of CO2 avoidance are tapped
+            can give to folks before those sources of CO2e avoidance are tapped
             out, at which point we have to look for other sources of carbon
-            emissions: like flying, driving, and what we eat. There's no point
-            in delaying this step, we need to start avoiding these emissions
+            emissions: flying, driving, and what we eat. There's no point in
+            delaying this step, we need to start avoiding these emissions
             immediately.
           </p>
 
           <p>
-            To avoid the worst effects of climate change, we all get our
+            To avoid the worst effects of climate change, we all need to get our
             individual carbon footprints down to{' '}
             <a href="https://www.tmrow.com/climatechange#objective--2-tons-co2eq-per-human-per-year-by-2050">
               5 tonnes a year by 2030
             </a>
             , then 2 tonnes a year by 2050. Whilst the previous examples of
             United Kingdom (10 tCO2e per person per year) and United States (20
-            tCO2e per person per year), the{' '}
+            tCO2e per person per year) highlight some of the highest individual
+            emissions, the{' '}
             <a href="https://www.independent.co.uk/environment/british-carbon-footprint-africa-emissions-oxfam-climate-change-a9271861.html">
               18 lowest emitting countries were in Africa, including Nigeria,
               Kenya and Zimbabwe
             </a>
-            , all coming in under 1 tCO2e per person per year! it's worth
-            thinking about this difference a little, and thinking: how many
-            people are going to need to send money to charities to plant trees
-            in these countries who are already living low carbon lifestyles,
-            when I continue to live 5-15 tonnes over the top of the UN
-            recommendations?
+            , all coming in under 1 tCO2e per person per year! It's worth
+            thinking about this difference a little, and asking: how many people
+            are going to need to send money to charities to plant trees in these
+            countries who are already living low carbon lifestyles, when I
+            continue to live 5-15 tonnes over the top of the UN recommendations?
           </p>
 
           <p>
-            Reducing your own emissions have a far more noticeable and direct
+            Reducing your own emissions has a far more noticeable and direct
             impact, and often{' '}
             <a href="https://protect.earth/tags/save">save money</a>. That money
             can then be used to offset whatever footprint is remaining, or help
@@ -401,13 +427,25 @@ export default () => (
             <a href="http://shrinkthatfootprint.com/food-carbon-footprint-diet">
               average meat-based diet causes ~2.3 tCO2e
             </a>{' '}
-            and an average plant-based vegan diet is ~1.3 tCO2e. If you switch
-            from meta-based diet to veganism then that's a huge, important step
-            towards a 5 tCO2 footprint, but there is still 1.3 tCO2e that could
-            be offset. Everything we do has an emissions cost, even buying a
-            bicycle and getting it delivered has a footprint, so tracking what
-            your footprint is then actively seeking the reduction of that over
-            time, within the UN recommended deadlines or before.
+            and an average plant-based vegan diet is 43% lower at ~1.3 tCO2e. If
+            you switch from meat-based diet to veganism then that's a huge,
+            important step towards a 5 tCO2 footprint, but there is still 1.3
+            tCO2e that could be offset.
+          </p>
+
+          <p>
+            Everything we do has an emissions cost: even buying a bicycle and
+            getting it delivered causes CO2 emissions, but those emissions are
+            far lower than driving to work, and definitely lower than buying a
+            new car. Buying a brand new{' '}
+            <a href="https://www.apple.com/environment/pdf/products/notebooks/16-inch_MacBookPro_PER_Nov2019.pdf">
+              Apple laptop is ~0.4 tCO2e
+            </a>{' '}
+            , which is equivalent of a flight from London to Athens. It can be
+            tough figuring this all out, so grab a{' '}
+            <a href="/footprint-calculators/">carbon footprint tracker</a> to
+            learn more, then actively seek the reduction of that number each
+            month, within the UN recommended deadlines or before.
           </p>
 
           <ul>
@@ -456,23 +494,22 @@ export default () => (
           <p>
             Relying on one step of the plan or squabbling about which ones are
             good or bad will lead to confusion and inaction. We definitely want
-            people to be offsetting their footprint, so long as that the
-            messaging is clear: offsetting is not a free pass top continue
-            living a polluting life, but it is a valuable tool to balance your
-            remaining footprint whilst you make drastic reductions month by
-            month.{' '}
+            people to be offsetting their footprint, so long as the messaging is
+            clear: offsetting is not a free pass to continue living a polluting
+            lifestyle, but it is a valuable tool to balance your remaining
+            footprint whilst you make drastic reductions month by month.{' '}
           </p>
 
           <p>
-            If all individuals, companies, and governments can start with reduce
-            their emissions sharply, and we all increase our funding for these
-            projects by offsetting whatever footprints remain, then eventually
-            we'll need less and less offsetting to be truly carbon neutral, then
-            shortly after be climate positive. We've got to sort this out now,
-            so if you wanna sign up for an account with an offset program today,
-            then start figuring out where to make the biggest changes in your
-            life tomorrow, that's fine. The important thing is to do both, and
-            quickly.{' '}
+            If all individuals, companies, and governments can start with
+            tracking and reducing their emissions sharply, and we all increase
+            our funding for these projects by offsetting whatever footprints
+            remain, then eventually we'll need less and less offsetting to be
+            truly carbon neutral, then shortly after be climate positive. We've
+            got to sort this out now, so if you wanna sign up for an account
+            with an offset program today, then start figuring out where to make
+            the biggest changes in your life tomorrow, that's fine. The
+            important thing is to do both, and quickly.{' '}
           </p>
 
           <h2 id="checkforstandards">Check for Standards</h2>
@@ -497,22 +534,40 @@ export default () => (
           </p>
 
           <p>
-            Organizations like <a href="https://offset.earth/">Offset Earth</a>{' '}
-            and{' '}
-            <a href="https://co2.myclimate.org/en/offset_further_emissions">
-              myclimate
-            </a>{' '}
-            do this homework for you and only pick certified projects, so you
-            can be confident your money is getting to the best place.{' '}
-          </p>
-
-          <p>
             If an offsetting program does not tell you which standard it's
             using, or uses a "standard" you've never heard of, then be very
             wary, do a load of research on that standard, or avoid it entirely.
             We've done our due diligence on all the{' '}
             <a href="https://protect.earth/tags/offset">offset providers</a>{' '}
             found on our site, so maybe just stick to these ones.
+          </p>
+
+          <p>
+            Organizations like <a href="https://offset.earth/">Offset Earth</a>{' '}
+            and{' '}
+            <a href="https://co2.myclimate.org/en/offset_further_emissions">
+              myclimate
+            </a>{' '}
+            do their homework for you, and only pick certified projects. The
+            next thing to check for is clarity around finances and operational
+            costs. Of course, an organization putting this on their website
+            doesn't immediately make it true, but <em>not</em> not being clear
+            about costs is a sure sign of a scam.
+          </p>
+
+          <img
+            src={imgPieChart}
+            alt="Offset.Earth advertise their split as 87.5% to offsetting and tree planting, and 12.5% to operational costs"
+          />
+
+          <p>
+            Seeing an offsetting company keep 12-17% for operational costs and
+            marketing is pretty common, and not just reasonable, but quite
+            beneficial. Instead of using Offset Earth you could do the homework
+            yourself, but providing these subscription-based services with more
+            marketing budget expands the user-base too, which will get more
+            subscribers donating every month. This network effect will make your
+            payments go much farther at reducing CO2 emissions.{' '}
           </p>
 
           <h2 id="sogoodorbad">So, Good or Bad?</h2>
@@ -525,15 +580,17 @@ export default () => (
           </p>
 
           <p>
-            I have stopped thinking of offsetting as supporting the status quo,
-            and think of it as a means for supporting emission reduction
-            programs, funding direct capture technology, supporting
+            It helps to stop thinking of offsetting as supporting the status
+            quo, and start thinking of it as a means for supporting emission
+            reduction programs, funding direct capture technology, supporting
             reforestation and rewilding, then it's covering a whole bunch of the{' '}
             <a href="https://www.drawdown.org/solutions">
               Project Drawdown solutions
             </a>
             , which is filling a huge funding shortfall from governments around
-            the world.{' '}
+            the world. Education around high emission lifestyles is another
+            problem that needs solving, but we can solve that whilst we also
+            fund these programs.
           </p>
 
           <p>
@@ -547,7 +604,7 @@ export default () => (
             <a href="https://www.theguardian.com/environment/2019/sep/12/deforestation-world-losing-area-forest-size-of-uk-each-year-report-finds">
               losing forests cover equivalent to the size of the UK every year
             </a>{' '}
-            so let's not complain about deforestation protection. Most of us
+            so let's not complain about deforestation prevention. Most of us
             could shave a few tonnes of our carbon footprint this year, so let's
             not complain about personal action and footprint reduction
             education.
