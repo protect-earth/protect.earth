@@ -218,9 +218,12 @@ export default () => (
             so you need a reforestation team that actively cares about the
             outcome, instead of one which is trying to make a bit of money from
             peoples guilt, and you need to be sure they're not going to clear
-            cut those trees in 10 years. There are a lot of{' '}
+            cut those trees in 10 years. Protection againsty deforestation is
+            also tough to prove. Were those trees definitely going to get cut
+            down right now and did this money stop that from happening? How long
+            will that protection last and how is it enforced? There are a lot of{' '}
             <a href="https://plantit2020.org/pdf/Scams_Short_Edited.pdf">
-              scams in the reforestation space
+              scams in the reforestation/protection space
             </a>
             .
           </p>
@@ -283,9 +286,17 @@ export default () => (
             but we absolutely need to increase{' '}
             <a href="https://ourworldindata.org/forests">
               the woodland cover of all the countries around the world
+            </a>{' '}
+            because the increase in{' '}
+            <a href="https://edition.cnn.com/2019/03/25/health/hurricane-maria-forest-climate/index.html">
+              extreme storms are speeding up loss of woodland
             </a>
-            . The UK currently has 7.8 million acres out of 60 million acres,
-            which is ~13%. We should be aiming for at least 25%, but we also
+            , and{' '}
+            <a href="https://theconversation.com/we-found-2-c-of-warming-will-push-most-tropical-rainforests-above-their-safe-heat-threshold-139071">
+              existing rainforests are going to die off if we hit 2ºC
+            </a>
+            . The UK currently has ~13% forest cover, and we should quickly aim
+            for at least 25% through reforestation and protection, but we also
             need to fund other projects which can have a much bigger short term
             impact on CO2 levels as well. For this reason, legitimate offsetting
             projects will hedge their bets with a two-pronged approach.{' '}
