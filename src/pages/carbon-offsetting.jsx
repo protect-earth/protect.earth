@@ -48,10 +48,10 @@ export default () => (
               avoid trees being cut down and burned
             </li>
             <li>
-              Funding renewable energy projects to reduce/remove reliance on
+              Funding renewable energy projects to reduce/eliminate reliance on
               fossil fuels
             </li>
-            <li>Capturing methane. gas emissions from sites like landfills</li>
+            <li>Capturing methane gas emissions from sites like landfills</li>
           </ul>
 
           <p>
