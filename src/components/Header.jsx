@@ -8,6 +8,17 @@ import Row from 'react-bootstrap/Row';
 import Navbar from 'react-bootstrap/Navbar';
 import Nav from 'react-bootstrap/Nav';
 
+const guides = [
+  {
+    slug: 'getting-started',
+    title: 'Getting Started',
+  },
+  {
+    slug: 'carbon-offsetting',
+    title: 'Is Carbon Offsetting Good or Bad?',
+  },
+];
+
 const useCases = [
   {
     tag: 'commute',
@@ -60,6 +71,16 @@ const Header = ({ dark }) => (
                     href={`/tags/${useCase.tag}`}
                   >
                     {useCase.title}
+                  </Dropdown.Item>
+                ))}
+              </DropdownButton>
+              <DropdownButton title="Guides" variant="Default">
+                {guides.map(guide => (
+                  <Dropdown.Item
+                    key={`guide-${guide.slug}`}
+                    href={`/${guide.slug}`}
+                  >
+                    {guide.title}
                   </Dropdown.Item>
                 ))}
               </DropdownButton>
