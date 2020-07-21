@@ -48,7 +48,7 @@ export default ({ data }) => {
                 We all need to improve our carbon footprint. Everyone. Most
                 footprints in developed countries are 10-20 tonnes, but the
                 sustainable target for each person is 5 tonnes by 2030, 2 tonnes
-                by 2050. We are not on target.
+                by 2050. We are not on target, but we could be.
               </p>
               <ul>
                 <li>
