@@ -1,12 +1,13 @@
 ---
 title: Finance
-intro: 'Banking and investing doesn''t have to be all oil and mining, some have principles, and are helping solve the worlds problems.'
+intro: "Banking and investing doesn't have to be all oil and mining, some have principles, and are helping solve the worlds problems."
 image: categories/finance.jpg
 updated_by: d2e48869-19c6-464f-86b8-dbe8bc98ac04
 updated_at: 1589383778
 id: d8a27ec4-c533-4a8d-a8fe-c217f073c790
 ---
-Anyone with any sort of bank account, whether it's a regular current account, savings account, pension, anything, and that money is almost certainly invested in fossil fuels whether you know it or not. Most of the worlds major banks are [pouring \$1.9 _trillion_ into fossil fuels in 2019 alone](https://www.ran.org/bankingonclimatechange2019/#data-panel), and with many of those companies now getting bailouts with taxpayer money, you're funding fossil fuels **twice**.
+
+Anyone with any sort of bank account, whether it's a regular current account, savings account, or pension, almost certainly has invested in fossil fuels without knowing about it. Most of the worlds major banks are [pouring \$1.9 _trillion_ into fossil fuels in 2019 alone](https://www.ran.org/bankingonclimatechange2019/#data-panel), and with many of those companies now getting bailouts with taxpayer money, you're funding fossil fuels **twice**.
 
 I'd rather take the money out of the hands of bankers who keep making terrible choices, and give it to those betting on solutions to the climate crisis. This is no longer a radical position, with major asset managers like BlackRock and Axa SA choosing to divest from fossil fuels.
 
