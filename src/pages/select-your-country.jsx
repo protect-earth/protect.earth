@@ -12,7 +12,7 @@ export default ({ data }) => {
   const [searchTerm, setSearchTerm] = useState('');
 
   let countriesWithContent = [];
-  data.allLinksYaml.nodes.forEach(link => {
+  data.allLinksYaml.nodes.forEach((link) => {
     countriesWithContent = union(countriesWithContent, link.countries);
   });
 
@@ -36,7 +36,7 @@ export default ({ data }) => {
               </div>
               <a
                 href="#"
-                onClick={e => {
+                onClick={(e) => {
                   e.preventDefault();
                   clearCountry();
                   navigate('/');
@@ -47,10 +47,10 @@ export default ({ data }) => {
             </div>
           ) : null}
           {Object.keys(countries)
-            .filter(countryCode =>
-              countries[countryCode].toLowerCase().includes(searchTerm)
-            )
-            .map(countryCode => {
+            .filter((countryCode) => {
+              return countries[countryCode]?.toLowerCase().includes(searchTerm);
+            })
+            .map((countryCode) => {
               const countryHasContent = countriesWithContent.includes(
                 countryCode.toLowerCase()
               );
