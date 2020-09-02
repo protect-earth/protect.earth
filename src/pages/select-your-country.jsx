@@ -1,20 +1,13 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { graphql, navigate } from 'gatsby';
-import flag from 'country-code-emoji';
-import { union } from 'lodash';
 
 import { Layout } from '../components';
 import { useCountry } from '../context/country-context';
+import Countries from '../countries';
 
-export default ({ data }) => {
+export default () => {
   const { country, setCountry, clearCountry } = useCountry();
-  const countries = require('i18n-iso-countries').getNames('en');
-  const [searchTerm, setSearchTerm] = useState('');
-
-  let countriesWithContent = [];
-  data.allLinksYaml.nodes.forEach((link) => {
-    countriesWithContent = union(countriesWithContent, link.countries);
-  });
+  const countries = Countries.getAll();
 
   return (
     <Layout title="Select Your Country">
@@ -24,7 +17,7 @@ export default ({ data }) => {
           <input
             type="text"
             placeholder="Filter Countries"
-            onChange={e => setSearchTerm(e.target.value.toLowerCase())}
+            onChange={(e) => setCountry(e.target.value.toLowerCase())}
           />
         </div>
         <div>
@@ -32,10 +25,9 @@ export default ({ data }) => {
             <div className="country-list-item selected" key={country.code}>
               <small>Currently selected</small>
               <div>
-                {flag(country.code)} {country.name}
+                {country.flag} {country.name}
               </div>
-              <a
-                href="#"
+              <button
                 onClick={(e) => {
                   e.preventDefault();
                   clearCountry();
@@ -43,57 +35,28 @@ export default ({ data }) => {
                 }}
               >
                 Remove
-              </a>
+              </button>
             </div>
           ) : null}
-          {Object.keys(countries)
-            .filter((countryCode) => {
-              return countries[countryCode]?.toLowerCase().includes(searchTerm);
-            })
-            .map((countryCode) => {
-              const countryHasContent = countriesWithContent.includes(
-                countryCode.toLowerCase()
-              );
-              const countryFlag = flag(countryCode);
-              const countryName = countries[countryCode];
 
-              if (!countryHasContent) {
-                return (
-                  <div className="country-list-item disabled" key={countryCode}>
-                    {countryFlag} {countryName}
-                    <div className="no-content-message">
-                      <small>
-                        We don't have any content for {countryName}, yet. Why
-                        not{' '}
-                        <a
-                          target="_blank"
-                          href="https://github.com/protect-earth/protect.earth/blob/master/CONTRIBUTING.md"
-                          rel="noopener noreferrer"
-                        >
-                          contribute something
-                        </a>
-                        ?
-                      </small>
-                    </div>
-                  </div>
-                );
-              }
+          {Object.values(countries).map((country) => {
+            const flag = country.emoji;
+            const name = country.name;
+            const code = country.code;
 
-              if (countryName !== country.name) {
-                return (
-                  <div
-                    className="country-list-item"
-                    key={countryCode}
-                    onClick={() => {
-                      setCountry({ code: countryCode, name: countryName });
-                      navigate('/');
-                    }}
-                  >
-                    {countryFlag} {countryName} &rarr;
-                  </div>
-                );
-              }
-            })}
+            return (
+              <div
+                className="country-list-item"
+                key={code}
+                onClick={() => {
+                  setCountry(country);
+                  navigate('/');
+                }}
+              >
+                {flag} {name} &rarr;
+              </div>
+            );
+          })}
         </div>
       </div>
     </Layout>

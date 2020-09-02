@@ -77,27 +77,39 @@ export default function Template({
   pageContext: { category, html, links, slug },
 }) {
   const { country, clearCountry } = useCountry();
-  const anyLinksHaveCountry =
-    country.name !== null && links.some(link => linkHasCountry(link, country));
 
   const seoImage =
     site.siteMetadata.siteUrl + category.image.twitterCard.fixed.src;
 
-  const linkHasCountry = (link, country) =>
-    !!link.countries && link.countries.includes(country.code.toLowerCase());
+  // get all links which are either global or for this country
 
-  const featuredLinks = links.filter(l => l.featured === true);
-  const categoryLinks = links
-    .filter(l => l.featured !== true)
+  const relevantLinks = !country.name
+    ? links
+    : links.filter((link) => {
+        if (link.countries === undefined) {
+          // yep, this action is global!
+          return true;
+        }
+        if (
+          Array.isArray(link.countries) &&
+          link.countries.includes(country.code.toLowerCase())
+        ) {
+          // yep, this country is in the list!
+          return true;
+        }
+        // seems like this action is not relevant to this country
+        return false;
+      });
+
+  const featuredLinks = relevantLinks.filter((l) => l.featured === true);
+  const categoryLinks = relevantLinks
+    .filter((l) => l.featured !== true)
     .sort((a, b) => a.title.localeCompare(b.title));
 
-  const findLinkPicture = src => {
+  const findLinkPicture = (src) => {
     if (!src) return;
 
-    const filename = src
-      .split('/')
-      .reverse()
-      .shift();
+    const filename = src.split('/').reverse().shift();
 
     const picture = pictures.nodes.find(
       ({ relativePath }) => relativePath === filename
@@ -146,7 +158,7 @@ export default function Template({
             <div className="d-flex align-items-center mb-3">
               <span className="mr-2">Share this page:</span>
               <SocialLinks
-                text={`Check out ${category.title} links on Protect.Earth:`}
+                text={`Check out ${category.title} actions:`}
                 url={site.siteMetadata.siteUrl + slug}
                 all
               />
@@ -154,13 +166,12 @@ export default function Template({
             {country.name !== null && (
               <div className="showing-links-for-country">
                 <h3>
-                  {anyLinksHaveCountry ? 'Showing' : 'No'} links for{' '}
-                  {Countries.fromAlpha2Code(country.code).emoji} {country.name}
+                  Links for {country.emoji} {country.name}
                 </h3>
                 <Link to="/select-your-country">Change</Link>
                 <span>&middot;</span>
                 <button
-                  onClick={e => {
+                  onClick={(e) => {
                     e.preventDefault();
                     clearCountry();
                   }}
@@ -179,7 +190,7 @@ export default function Template({
             <Container>
               <Row>
                 <CardDeck>
-                  {featuredLinks.map(link => (
+                  {featuredLinks.map((link) => (
                     <Col xs={12} lg={4} key={slugify(link.title)}>
                       <FeaturedCard
                         title={link.title}
@@ -200,7 +211,7 @@ export default function Template({
         <Row>
           <Col>
             <ul className="link-wrapper">
-              {categoryLinks.map(link => (
+              {categoryLinks.map((link) => (
                 <Fragment key={`${slugify(link.title)}`}>
                   {country.name === null ||
                   (country.name !== null && linkHasCountry(link, country)) ? (
@@ -217,7 +228,7 @@ export default function Template({
                               {link.title}
                             </a>
                           </strong>
-                          {(link.countries || []).map(code => {
+                          {(link.countries || []).map((code) => {
                             const country = Countries.fromAlpha2Code(
                               code.toUpperCase()
                             );

@@ -1,17 +1,15 @@
 import React from 'react';
-import { OutboundLink } from 'gatsby-plugin-google-analytics';
 
-// import Button from 'react-bootstrap/Button';
+import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 // import Dropdown from 'react-bootstrap/Dropdown';
 import Row from 'react-bootstrap/Row';
-// import { useCountry } from '../context/country-context';
-
-// import countries from '../countries';
+import { useCountry } from '../context/country-context';
+import Countries from '../countries';
 
 const Footer = () => {
-  // const { country } = useCountry();
+  const { country } = useCountry();
   return (
     <footer
       className="bg-dark"
@@ -24,47 +22,49 @@ const Footer = () => {
 
             <div className="credits">
               Maintained by{' '}
-              <OutboundLink
+              <a
                 href="https://twitter.com/philsturgeon"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 @philsturgeon
-              </OutboundLink>{' '}
-              <OutboundLink
+              </a>{' '}
+              <a
                 href="https://twitter.com/jungledev"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 @jungledev
-              </OutboundLink>{' '}
-              <OutboundLink
+              </a>{' '}
+              <a
                 href="https://twitter.com/irreverentmike"
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 @irreverentmike
-              </OutboundLink>
+              </a>
             </div>
           </Col>
           <Col xs={12} md={2} lg={2}>
-            {/* <Dropdown>
-            <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-              Language
-            </Dropdown.Toggle>
+            {/*
+            <Dropdown>
+              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
+                Language
+              </Dropdown.Toggle>
 
-            <Dropdown.Menu>
-              <Dropdown.Item href="#/action-1">English</Dropdown.Item>
-              <Dropdown.Item href="#/action-2">Español</Dropdown.Item>
-              <Dropdown.Item href="#/action-3">Français</Dropdown.Item>
-            </Dropdown.Menu>
-          </Dropdown> */}
+              <Dropdown.Menu>
+                <Dropdown.Item href="#/action-1">English</Dropdown.Item>
+                <Dropdown.Item href="#/action-2">Español</Dropdown.Item>
+                <Dropdown.Item href="#/action-3">Français</Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+            */}
 
-            {/* <div className="change-country">
+            <div className="change-country">
               {country.name ? (
                 <>
                   <span className="current">
-                    {countries.fromAlpha2Code(country.code).emoji}{' '}
+                    {Countries.fromAlpha2Code(country.code).emoji}{' '}
                     {country.name}
                   </span>{' '}
                   <span>&middot;</span>
@@ -73,7 +73,7 @@ const Footer = () => {
               <Button href="/select-your-country" className="link text-white">
                 {country.name ? 'Change' : 'Filter site for your'} country
               </Button>
-            </div> */}
+            </div>
           </Col>
         </Row>
         <Row noGutters>

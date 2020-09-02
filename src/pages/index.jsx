@@ -10,7 +10,7 @@ import Row from 'react-bootstrap/Row';
 import { Layout, CategoryCard, RecentLinks } from '../components';
 
 export default ({ data }) => {
-  const categories = data.allMarkdownRemark.edges.map(edge => ({
+  const categories = data.allMarkdownRemark.edges.map((edge) => ({
     ...edge.node.frontmatter,
     slug: edge.node.fields.slug,
   }));
@@ -101,7 +101,7 @@ export default ({ data }) => {
           <Row>
             <Col>
               <div className="card-grid">
-                {categories.map(category => (
+                {categories.map((category) => (
                   <CategoryCard
                     category={category}
                     key={slugify(category.title)}
@@ -140,7 +140,6 @@ export const pageQuery = graphql`
     }
     allLinksYaml {
       nodes {
-        # charity_url
         categories
         countries
         description
