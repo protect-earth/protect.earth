@@ -66,7 +66,7 @@ export default ({ data }) => {
                   <a href="/tags/refuse">refuse</a> pointless trips and waste
                 </li>
                 <li>
-                  chose second hand and <a href="/tags/reuse">reuse</a> instead
+                  choose second hand and <a href="/tags/reuse">reuse</a> instead
                   of buying new
                 </li>
                 <li>
