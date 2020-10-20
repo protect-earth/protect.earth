@@ -17,6 +17,13 @@ blockquote p {
   display: inline;
 }
 
+// Ensure the selected country is
+// readable on the #333 footer.
+.change-country .current {
+  color: white;
+  margin-bottom: 20px;
+}
+
 /* Select Your Country */
 .select-your-country {
   max-width: 768px;

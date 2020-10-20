@@ -67,7 +67,6 @@ const Footer = () => {
                     {Countries.fromAlpha2Code(country.code).emoji}{' '}
                     {country.name}
                   </span>{' '}
-                  <span>&middot;</span>
                 </>
               ) : null}
               <Button href="/select-your-country" className="link text-white">
