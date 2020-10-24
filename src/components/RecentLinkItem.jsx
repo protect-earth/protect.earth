@@ -20,12 +20,13 @@ export default ({ link }) => {
           link.tags.map(tag => {
             return (
               <Badge
+                key={tag}
                 variant="secondary"
                 className="ml-4"
                 style={{
                   marginLeft: '2em',
-                  'font-size': '60%',
-                  'font-weight': 300,
+                  'fontSize': '60%',
+                  'fontWeight': 300,
                 }}
               >
                 <a href={`/tags/${tag}`} style={{ color: 'white' }}>
