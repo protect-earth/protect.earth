@@ -13,11 +13,6 @@ import {
   MenuSeparator,
 } from "reakit/Menu";
 
-// import { useCookies } from 'react-cookie';
-
-// const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
-
-
 import { useCountry } from '../context/country-context';
 import Countries from '../countries';
 
@@ -31,6 +26,7 @@ const setCookie = (language) => {
   console.log('Setting language...')
 
   // TODO: expiry and other metadata for the cookie...
+  // TODO: should overwrite if another language was selected...
   document.cookie=`lang_pref=${language}`;
 }
 
@@ -77,17 +73,20 @@ const Footer = () => {
             {/* If the language cookie's been set, we don't need to
             present the user to select a language. We need to present them
             a button to _clear_ their selection. */}
-
             <MenuButton {...menu}>Choose your language</MenuButton>
             <Menu {...menu} aria-label="Preferences">
               <MenuItem {...menu} onClick={() => {
-                // Set the HTTP cookie in the browser
-                setCookie('English');
-
+                setCookie('english');
                 menu.hide();
               }}>English</MenuItem>
-              <MenuItem {...menu}>Español</MenuItem>
-              <MenuItem {...menu}>Français</MenuItem>
+              <MenuItem {...menu} onClick={() => {
+                setCookie('spanish');
+                menu.hide();
+                }}>Español</MenuItem>
+              <MenuItem {...menu} onClick={() => {
+                setCookie('french');
+                menu.hide();
+                }}>Français</MenuItem>
             </Menu>
 
             <div className="change-country">
