@@ -17,11 +17,18 @@ blockquote p {
   display: inline;
 }
 
-// Ensure the selected country is
+// Ensure selected language and country is
 // readable on the #333 footer.
-.change-country .current {
+.selected-item {
   color: white;
+}
+
+.change-language {
   margin-bottom: 20px;
+}
+
+.change-country .current {
+  margin-bottom: 10px;
 }
 
 /* Select Your Country */
