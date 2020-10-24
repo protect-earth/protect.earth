@@ -1,38 +1,35 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import Button from 'react-bootstrap/Button';
 import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
-// import Dropdown from 'react-bootstrap/Dropdown';
+import Dropdown from 'react-bootstrap/Dropdown';
 import Row from 'react-bootstrap/Row';
-import {
-  useMenuState,
-  Menu,
-  MenuItem,
-  MenuButton,
-  MenuSeparator,
-} from "reakit/Menu";
 
 import { useCountry } from '../context/country-context';
 import Countries from '../countries';
 
-/**
- * When a language is selected, we store
- * a cookie that persists that language. This
- * enables users to have some continuity when
- * refreshing, or returning to the site.
- */
-const setCookie = (language) => {
-  console.log('Setting language...')
-
-  // TODO: expiry and other metadata for the cookie...
-  // TODO: should overwrite if another language was selected...
-  document.cookie=`lang_pref=${language}`;
-}
-
 const Footer = () => {
+
+  const [language, setLanguage]  = useState(sessionStorage.getItem('lang_pref'))
   const { country } = useCountry();
-  const menu = useMenuState();
+
+  /**
+   * When a language is selected, we store
+   * temporary value in session storage that persists through
+   * reloads. This enables users to have some continuity when
+   * refreshing, or returning to the site. We also bind the
+   * update to React's state, so that when a user re-selects
+   * an option, we trigger a state change to refresh the site.
+   *
+   * We use the ISO 639-1 language codes to map to specified languages, e.g.
+   * "EN" maps to "English".
+   */
+  const updateLanguage = (language) => {
+    setLanguage(language);
+    sessionStorage.setItem('lang_pref', language);
+  }
+
   return (
     <footer
       className="bg-dark"
@@ -69,30 +66,46 @@ const Footer = () => {
             </div>
           </Col>
           <Col xs={12} md={2} lg={2}>
+            {/*
+              If the user has a language preference in session storage, we don't need to
+              present the user to select a language. We render a button to _clear_ their selection.
+            */}
+            <Dropdown className="change-language">
+              {language ?
+                <div>
+                  <span className="selected-item">Language: {language}</span>
+                  <Button onClick={() => {
+                    setLanguage(null);
+                    sessionStorage.removeItem('lang_pref')
+                  }}variant="link">Reset language</Button>
+                </div> :
+                (<Dropdown.Toggle id="dropdown-language">
+                  Select language
+                </Dropdown.Toggle>)}
 
-            {/* If the language cookie's been set, we don't need to
-            present the user to select a language. We need to present them
-            a button to _clear_ their selection. */}
-            <MenuButton {...menu}>Choose your language</MenuButton>
-            <Menu {...menu} aria-label="Preferences">
-              <MenuItem {...menu} onClick={() => {
-                setCookie('english');
-                menu.hide();
-              }}>English</MenuItem>
-              <MenuItem {...menu} onClick={() => {
-                setCookie('spanish');
-                menu.hide();
-                }}>Español</MenuItem>
-              <MenuItem {...menu} onClick={() => {
-                setCookie('french');
-                menu.hide();
-                }}>Français</MenuItem>
-            </Menu>
+                <Dropdown.Menu>
+                  <Dropdown.Item onClick={() => {
+                    updateLanguage('EN');
+                  }}>
+                    English
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => {
+                    updateLanguage('ES');
+                  }}>
+                    Español
+                  </Dropdown.Item>
+                  <Dropdown.Item onClick={() => {
+                    updateLanguage('FR');
+                  }}>
+                    Français
+                  </Dropdown.Item>
+                </Dropdown.Menu>
+            </Dropdown>
 
             <div className="change-country">
               {country.name ? (
                 <>
-                  <span className="current">
+                  <span className="current selected-item">
                     {Countries.fromAlpha2Code(country.code).emoji}{' '}
                     {country.name}
                   </span>{' '}
