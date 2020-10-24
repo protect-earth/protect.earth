@@ -5,11 +5,38 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 // import Dropdown from 'react-bootstrap/Dropdown';
 import Row from 'react-bootstrap/Row';
+import {
+  useMenuState,
+  Menu,
+  MenuItem,
+  MenuButton,
+  MenuSeparator,
+} from "reakit/Menu";
+
+// import { useCookies } from 'react-cookie';
+
+// const [cookies, setCookie, removeCookie] = useCookies(['cookie-name']);
+
+
 import { useCountry } from '../context/country-context';
 import Countries from '../countries';
 
+/**
+ * When a language is selected, we store
+ * a cookie that persists that language. This
+ * enables users to have some continuity when
+ * refreshing, or returning to the site.
+ */
+const setCookie = (language) => {
+  console.log('Setting language...')
+
+  // TODO: expiry and other metadata for the cookie...
+  document.cookie=`lang_pref=${language}`;
+}
+
 const Footer = () => {
   const { country } = useCountry();
+  const menu = useMenuState();
   return (
     <footer
       className="bg-dark"
@@ -46,19 +73,22 @@ const Footer = () => {
             </div>
           </Col>
           <Col xs={12} md={2} lg={2}>
-            {/*
-            <Dropdown>
-              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                Language
-              </Dropdown.Toggle>
 
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">English</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Español</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Français</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            */}
+            {/* If the language cookie's been set, we don't need to
+            present the user to select a language. We need to present them
+            a button to _clear_ their selection. */}
+
+            <MenuButton {...menu}>Choose your language</MenuButton>
+            <Menu {...menu} aria-label="Preferences">
+              <MenuItem {...menu} onClick={() => {
+                // Set the HTTP cookie in the browser
+                setCookie('English');
+
+                menu.hide();
+              }}>English</MenuItem>
+              <MenuItem {...menu}>Español</MenuItem>
+              <MenuItem {...menu}>Français</MenuItem>
+            </Menu>
 
             <div className="change-country">
               {country.name ? (
