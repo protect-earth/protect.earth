@@ -28,12 +28,16 @@ import Dropdown from 'react-bootstrap/Dropdown';
     return (
       <Dropdown className="change-language">
         {language ?
-          <div>
-            <span className="selected-item">Language: {language}</span>
-            <Button onClick={() => {
+          <div className="selected-item selected-language-block">
+            <span>Language: {language}</span>
+            <span> </span>
+            <Button
+              aria-label="Clear selection"
+              className="clear-button"
+              onClick={() => {
               setLanguage(null);
               sessionStorage.removeItem('lang_pref')
-            }}variant="link">Reset language</Button>
+            }}variant="link"> Reset ⓧ</Button>
           </div> :
           (<Dropdown.Toggle id="dropdown-language">
             Select language

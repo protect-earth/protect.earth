@@ -17,10 +17,19 @@ blockquote p {
   display: inline;
 }
 
+.selected-language-block {
+  display: flex;
+  align-items: center;
+}
+
 // Ensure selected language and country is
 // readable on the #333 footer.
 .selected-item {
   color: white;
+}
+
+.clear-button {
+  padding: 0; // reset default padding applied by React Bootstrap
 }
 
 .change-language {
