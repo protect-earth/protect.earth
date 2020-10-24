@@ -42,7 +42,6 @@
     "react-helmet": "^6.1.0",
     "react-markdown": "^4.3.1",
     "react-responsive-carousel": "^3.1.51",
-    "reakit": "^1.2.5",
     "slugify": "^1.4.0",
     "title-case": "^3.0.2"
   },
