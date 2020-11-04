@@ -7,7 +7,6 @@ import Row from 'react-bootstrap/Row';
 
 import CountrySelection from './CountrySelection';
 // import { useCountry } from '../context/country-context';
-// import Countries from '../countries';
 
 const Footer = () => {
 

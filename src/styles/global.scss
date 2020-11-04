@@ -25,6 +25,8 @@ blockquote p {
 // Ensure selected language and country is
 // readable on the #333 footer.
 .selected-item {
+  text-align: center;
+  margin-bottom: 7px;
   color: white;
 }
 
@@ -32,12 +34,9 @@ blockquote p {
   padding: 0; // reset default padding applied by React Bootstrap
 }
 
-.change-language {
-  margin-bottom: 10px;
-}
-
-.change-country .current {
-  margin-bottom: 20px;
+.change-country {
+  display: flex;
+  flex-direction: column;
 }
 
 /* Select Your Country */
