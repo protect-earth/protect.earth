@@ -5,15 +5,11 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
-// TODO: do we need this context? Can we just use
-// a stateful hook?
-import { useCountry } from '../context/country-context';
-import Countries from '../countries';
-// import LanguageDropdown from './LanguageDropdown';
-import CountryButton from './CountryButton';
+import CountrySelection from './CountrySelection';
+// import { useCountry } from '../context/country-context';
+// import Countries from '../countries';
 
 const Footer = () => {
-  const { country } = useCountry();
 
   return (
     <footer
@@ -53,7 +49,7 @@ const Footer = () => {
           <Col xs={12} md={2} lg={2}>
 
             {/* Enable country selection, preview, and clearing. */}
-            <CountryButton />
+            <CountrySelection />
 
           </Col>
         </Row>

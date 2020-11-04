@@ -5,53 +5,11 @@ import { Layout } from '../components';
 import { useCountry } from '../context/country-context';
 import Countries from '../countries';
 
-//   return (
-//     <Dropdown className="change-language">
-//       {language ?
-//         <div className="selected-item selected-language-block">
-//           <span>Language: {language}</span>
-//           <span> </span>
-//           <Button
-//             aria-label="Clear selection"
-//             className="clear-button"
-//             onClick={() => {
-//               setCountry(null);
-//               sessionStorage.removeItem('country_pref')
-//             }} variant="link"> Reset ⓧ</Button>
-//         </div> :
-//         (<Dropdown.Toggle id="dropdown-language">
-//           Select language
-//         </Dropdown.Toggle>)}
-
-//       <Dropdown.Menu>
-//         <Dropdown.Item onClick={() => {
-//           updateCountry('EN');
-//         }}>
-//           English
-//             </Dropdown.Item>
-//         <Dropdown.Item onClick={() => {
-//           updateCountry('ES');
-//         }}>
-//           Español
-//             </Dropdown.Item>
-//         <Dropdown.Item onClick={() => {
-//           updateCountry('FR');
-//         }}>
-//           Français
-//             </Dropdown.Item>
-//       </Dropdown.Menu>
-//     </Dropdown>
-//   );
-// };
-
-// export default LanguageDropdown;
-
 /**
  * If the user has a country preference in session storage, we don't need to
  * present the user to select a country. We update the button to _clear_ their selection.
  */
 export default () => {
-  // const { country, setCountry, clearCountry } = useCountry();
   const { clearCountry } = useCountry();
   const countries = Countries.getAll();
 
@@ -91,7 +49,8 @@ export default () => {
               <button
                 onClick={(e) => {
                   e.preventDefault();
-                  clearCountry();
+                  // Store an empty string in session storage
+                  updateCountry('');
                   navigate('/');
                 }}
               >
@@ -111,8 +70,6 @@ export default () => {
                 key={code}
 
                 onClick={() => {
-                  // setCountry(country.code);
-                  // debugger;
                   updateCountry(country.code);
                   navigate('/');
                 }}
