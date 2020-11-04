@@ -5,9 +5,12 @@ import Container from 'react-bootstrap/Container';
 import Col from 'react-bootstrap/Col';
 import Row from 'react-bootstrap/Row';
 
+// TODO: do we need this context? Can we just use
+// a stateful hook?
 import { useCountry } from '../context/country-context';
 import Countries from '../countries';
-import LanguageDropdown from './LanguageDropdown';
+// import LanguageDropdown from './LanguageDropdown';
+import CountryButton from './CountryButton';
 
 const Footer = () => {
   const { country } = useCountry();
@@ -49,21 +52,9 @@ const Footer = () => {
           </Col>
           <Col xs={12} md={2} lg={2}>
 
-            <LanguageDropdown />
+            {/* Enable country selection, preview, and clearing. */}
+            <CountryButton />
 
-            <div className="change-country">
-              {country.name ? (
-                <>
-                  <span className="current selected-item">
-                    {Countries.fromAlpha2Code(country.code).emoji}{' '}
-                    {country.name}
-                  </span>{' '}
-                </>
-              ) : null}
-              <Button href="/select-your-country" className="link text-white">
-                {country.name ? 'Change' : 'Filter site for your'} country
-              </Button>
-            </div>
           </Col>
         </Row>
         <Row noGutters>

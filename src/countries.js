@@ -15,6 +15,8 @@ const Countries = {
       };
     });
   },
+
+  // Takes a country code
   fromAlpha2Code: (code) => {
     return {
       code,
