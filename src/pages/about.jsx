@@ -24,30 +24,25 @@ const AboutPage = () => (
           <p>
             Protect.Earth came around after{' '}
             <a href="https://philsturgeon.com/">Phil</a> went riding around
-            Europe in the summer of 2019, the hottest year on record with the
-            hottest three months on record.
-          </p>
-          <p>
-            Phil was{' '}
-            <a href="https://phil.bike/trees/">raising money for trees</a> with{' '}
-            <a href="https://offset.earth/">Offset Earth</a>, and after the tour
+            Europe in the summer of 2019, the hottest year and hottest summer on
+            record. Phil was{' '}
+            <a href="https://offset.earth/articles/climate-emergency/climate-change-by-bike">
+              raising money for reforestation
+            </a>{' '}
+            with <a href="https://ecologi.com/">Ecology</a>, and after the tour
             lead to a lengthy injury he wanted to find other ways to fight the
             climate crisis.
           </p>
           <p>
-            Together with contributions from 50+ people, we gather resources to
-            help everyone find their next piece of climate action. The climate
-            crisis might be overwhelming when you start to understand the
-            severity of it all, but if we can get people on board with
-            simplifying their lives, reducing their footprint, offsetting the
-            remaining footprint for barely any money, and reducing the insane
-            amounts of waste we all cause, our kids might have a chance.
+            Together with contributions from 50+ people, we have gathered
+            resources to help everyone find their next piece of climate action.
+            The climate crisis can be overwhelming, but if we can get people on
+            board with simplifying their lives, reducing their footprint,
+            supporting ecosystem restoration, and reducing the insane amounts of
+            waste we all cause, our kids might inherit a world worth living in.
           </p>
         </Col>
       </Row>
-    </Container>
-    <Container>
-      <SuggestionForm />
     </Container>
   </Layout>
 );

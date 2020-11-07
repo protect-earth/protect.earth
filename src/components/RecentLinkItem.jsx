@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Badge } from 'react-bootstrap';
 
 const shorten = (str, maxLen, separator = ' ') => {

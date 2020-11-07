@@ -18,7 +18,12 @@ const Footer = () => {
       <Container>
         <Row noGutters>
           <Col xs={12} md={10} className="text-white">
-            <a href="/">&copy; {new Date().getFullYear()} - Protect.Earth</a>
+            <Button
+              href="https://airtable.com/shr9iNOeyFAAk8zqN"
+              target="_blank"
+            >
+              Submit more links
+            </Button>
 
             <div className="credits">
               Maintained by{' '}
@@ -46,21 +51,24 @@ const Footer = () => {
             </div>
           </Col>
           <Col xs={12} md={2} lg={2}>
-            {/*
-            <Dropdown>
-              <Dropdown.Toggle variant="secondary" id="dropdown-basic">
-                Language
-              </Dropdown.Toggle>
+            <Row noGutters>
+              <a
+                href="https://www.netlify.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  alt="Deploys by netlify"
+                  src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+                />
+              </a>
+            </Row>
 
-              <Dropdown.Menu>
-                <Dropdown.Item href="#/action-1">English</Dropdown.Item>
-                <Dropdown.Item href="#/action-2">Español</Dropdown.Item>
-                <Dropdown.Item href="#/action-3">Français</Dropdown.Item>
-              </Dropdown.Menu>
-            </Dropdown>
-            */}
+            <Row noGutters>
+              <a href="/">&copy; {new Date().getFullYear()} - Protect.Earth</a>
+            </Row>
 
-            <div className="change-country">
+            {/* <div className="change-country">
               {country.name ? (
                 <>
                   <span className="current">
@@ -72,20 +80,8 @@ const Footer = () => {
               <Button href="/select-your-country" className="link text-white">
                 {country.name ? 'Change' : 'Filter site for your'} country
               </Button>
-            </div>
+            </div> */}
           </Col>
-        </Row>
-        <Row noGutters>
-          <a
-            href="https://www.netlify.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              alt="Deploys by netlify"
-              src="https://www.netlify.com/img/global/badges/netlify-light.svg"
-            />
-          </a>
         </Row>
       </Container>
     </footer>
