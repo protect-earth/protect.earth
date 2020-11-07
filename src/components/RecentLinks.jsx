@@ -1,7 +1,4 @@
-import React, { Fragment } from 'react';
-
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import React from 'react';
 import RecentLinkItem from './RecentLinkItem';
 
 export default ({ links, showAmount }) => {

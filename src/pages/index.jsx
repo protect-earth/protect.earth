@@ -138,7 +138,10 @@ export const pageQuery = graphql`
         }
       }
     }
-    allAirtable(filter: {data: {status: {eq: "Completed"}}}) {
+    allAirtable(
+      filter: { data: { status: { eq: "Completed" } } }
+      sort: { fields: [data___ID], order: ASC }
+    ) {
       nodes {
         data {
           categories

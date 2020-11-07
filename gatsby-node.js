@@ -15,7 +15,7 @@ async function asyncForEach(array, callback) {
 exports.createSchemaCustomization = ({ actions }) => {
   const { createTypes } = actions;
   const typeDefs = `
-    type LinksYaml implements Node {
+    type AirtableData implements Node {
       image: String
     }
   `;
@@ -37,7 +37,7 @@ exports.onCreateNode = ({ node, getNode, actions }) => {
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions;
 
-  const result = await graphql(`
+  const categoriesQuery = await graphql(`
     query {
       allMarkdownRemark {
         edges {
@@ -68,62 +68,63 @@ exports.createPages = async ({ graphql, actions }) => {
     }
   `);
 
-  const allLinksQuery = await graphql(`
+  const linksQuery = await graphql(`
     query {
-      allLinksYaml {
+      allAirtable(filter: { data: { status: { eq: "Completed" } } }) {
         nodes {
-          categories
-          countries
-          description
-          featured
-          tags
-          title
-          url
-          image
+          data {
+            categories
+            countries
+            description
+            featured
+            tags
+            title
+            url
+            image
+          }
         }
       }
     }
   `);
 
-  const allLinks = allLinksQuery.data.allLinksYaml.nodes;
+  const links = linksQuery.data.allAirtable.nodes.map((node) => node.data);
 
-  // HACK to get JSON out to awesome-earth repo
-  // We'll get a proper API up for Protect Earth soon.
-  fs.writeFileSync('./public/links.json', JSON.stringify(allLinks));
-
-  await asyncForEach(result.data.allMarkdownRemark.edges, async ({ node }) => {
-    const {
-      frontmatter,
-      fields: { slug },
-      html,
-    } = node;
-
-    const sanitizedSlug = slug.replace(/^\/|\/$/g, '');
-    const linksForThisCategory = allLinks.filter(link =>
-      includes(link.categories, sanitizedSlug)
-    );
-
-    createPage({
-      path: slug,
-      component: path.resolve(`./src/templates/category.jsx`),
-      context: {
-        category: frontmatter,
+  await asyncForEach(
+    categoriesQuery.data.allMarkdownRemark.edges,
+    async ({ node }) => {
+      const {
+        frontmatter,
+        fields: { slug },
         html,
-        links: linksForThisCategory,
-        slug,
-      },
-    });
-  });
+      } = node;
+
+      const sanitizedSlug = slug.replace(/^\/|\/$/g, '');
+      const linksForThisCategory = links.filter((link) =>
+        includes(link.categories, sanitizedSlug)
+      );
+
+      createPage({
+        path: slug,
+        component: path.resolve(`./src/templates/category.jsx`),
+        context: {
+          category: frontmatter,
+          html,
+          links: linksForThisCategory,
+          slug,
+        },
+      });
+    }
+  );
 
   let allTags = [];
 
-  allLinks.forEach(link => {
+  links.forEach((link) => {
     allTags = union(allTags, link.tags);
   });
 
-  await asyncForEach(allTags, async tag => {
+  await asyncForEach(allTags, async (tag) => {
     const sanitizedTag = tag.replace(/^\/|\/$/g, '');
-    const linksForTag = allLinks.filter(link =>
+    const linksForTag = links.filter((link) =>
       includes(link.tags, sanitizedTag)
     );
 

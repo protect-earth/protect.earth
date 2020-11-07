@@ -4,4 +4,4 @@ The world is simultaneously underwater and on fire, and people want to know what
 
 ## Contributing
 
-This site is powered by the community, so please [contribute ideas, code, or design improvements](CONTRIBUTING.md)!
+This site is powered by the community, so please submit entries for the directory to this [submission form](https://airtable.com/shr9iNOeyFAAk8zqN), and [contribute ideas, code, or design improvements](CONTRIBUTING.md)!

@@ -70,10 +70,5 @@ export const pageQuery = graphql`
         title
       }
     }
-    allLinksYaml {
-      nodes {
-        countries
-      }
-    }
   }
 `;

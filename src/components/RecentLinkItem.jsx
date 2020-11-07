@@ -17,7 +17,7 @@ export default ({ link }) => {
       <p className="h4">
         {link.title}
         {link.tags &&
-          link.tags.map(tag => {
+          link.tags.map((tag) => {
             return (
               <Badge
                 variant="secondary"
@@ -35,7 +35,7 @@ export default ({ link }) => {
             );
           })}
       </p>
-      <div> {shorten(link.description, 90)} </div>
+      <div> {link.description && shorten(link.description, 90)} </div>
     </a>
   );
 };

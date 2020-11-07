@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: `Protect.Earth`,
@@ -5,7 +7,6 @@ module.exports = {
     description: `Links, resources, and articles to help you lead a more sustainable life. Learn about how to reduce your carbon footprint, and how to find and support sustainable projects and companies around the world. Take action today - the earth needs you to do your part.`,
   },
   plugins: [
-    'gatsby-plugin-netlify-cms',
     {
       resolve: 'gatsby-plugin-web-font-loader',
       options: {
@@ -34,14 +35,14 @@ module.exports = {
         path: `${__dirname}/src/pages/`,
       },
     },
-    {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `data`,
-        path: `${__dirname}/src/data/`,
-        ignore: [`**/\.*`], // ignore files starting with a dot
-      },
-    },
+    // {
+    //   resolve: `gatsby-source-filesystem`,
+    //   options: {
+    //     name: `data`,
+    //     path: `${__dirname}/src/data/`,
+    //     ignore: [`**/\.*`], // ignore files starting with a dot
+    //   },
+    // },
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -86,8 +87,8 @@ module.exports = {
             baseId: process.env.AIRTABLE_BASE,
             tableName: `Production`,
           },
-        ]
-      }
-    }
+        ],
+      },
+    },
   ],
 };
