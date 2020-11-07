@@ -13,7 +13,7 @@ export default ({ links, showAmount }) => {
         <p className="h2"> Recent Links</p>
       </div>
       {recentLinks.map((link, index) => {
-        return <RecentLinkItem key={index} link={link} />;
+        return <RecentLinkItem key={index} link={link.data} />;
       })}
     </div>
   );
