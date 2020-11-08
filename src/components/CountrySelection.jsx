@@ -4,10 +4,13 @@ import Button from 'react-bootstrap/Button';
 import Countries from '../countries';
 
 /**
- * If the user has a country preference in session storage, we don't need to
- * present the user to select a country. We render a button to _clear_ their selection.
+ * Renders a button to select a new country, and the currently
+ * selected country if one's been set in session storage.
+ *
+ * If the user has a country preference in session storage, we
+ * update the button text to "Change country".
  */
-const CountryButton = ({}) => {
+const CountrySelection = ({}) => {
   // Get the country code. e.g., "BG" for "Bulgaria"
   const [country] = useState(sessionStorage.getItem('country_pref'));
 
@@ -32,4 +35,4 @@ const CountryButton = ({}) => {
   );
 };
 
-export default CountryButton;
+export default CountrySelection;

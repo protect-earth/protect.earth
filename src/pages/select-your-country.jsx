@@ -10,17 +10,19 @@ import Countries from '../countries';
  * present the user to select a country. We update the button to _clear_ their selection.
  */
 export default () => {
-  const { clearCountry } = useCountry();
   const countries = Countries.getAll();
 
-  const [country, setCountry] = useState(sessionStorage.getItem('country_pref'))
+  const [country, setCountry] = useState(
+    sessionStorage.getItem('country_pref')
+  );
 
   /**
-   * When a country is selected, we store
-   * temporary value in session storage that persists through
-   * reloads. This enables users to have some continuity when
-   * refreshing, or returning to the site. We also bind the
-   * update to React's state, so that when a user re-selects
+   * When a country is selected, we store a
+   * temporary "country_pref" value in session storage
+   * that persists through reloads. This enables users to have
+   * continuity when refreshing, or returning to the site.
+   *
+   * We also bind the update to React's state, so that when a user re-selects
    * an option, we trigger a state change to refresh the site.
    */
   const updateCountry = (country) => {
@@ -68,7 +70,6 @@ export default () => {
               <div
                 className="country-list-item"
                 key={code}
-
                 onClick={() => {
                   updateCountry(country.code);
                   navigate('/');

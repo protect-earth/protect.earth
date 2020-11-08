@@ -15,7 +15,8 @@ const Countries = {
       };
     });
   },
-  // Takes a country code
+
+  // Takes a country code, e.g. 'GB'
   fromAlpha2Code: (code) => {
     return {
       code,
