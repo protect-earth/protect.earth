@@ -5,7 +5,6 @@ import Layout from './layout';
 import MailingListForm from './MailingListForm';
 import RecentLinks from './RecentLinks';
 import SEO from './seo';
-import SuggestionForm from './SuggestionForm';
 import SocialLinks from './SocialLinks';
 
 export {
@@ -17,5 +16,4 @@ export {
   RecentLinks,
   SEO,
   SocialLinks,
-  SuggestionForm,
 };

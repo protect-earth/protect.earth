@@ -8,15 +8,6 @@ import Jumbotron from 'react-bootstrap/Jumbotron';
 import Row from 'react-bootstrap/Row';
 
 const MailingListForm = () => {
-  const onMailingListSubmit = () => {
-    window.open(
-      'https://tinyletter.com/ProtectEarth',
-      'popupwindow',
-      'scrollbars=yes,width=800,height=600'
-    );
-    return true;
-  };
-
   return (
     <Container>
       <Row>
@@ -28,22 +19,40 @@ const MailingListForm = () => {
               </Col>
               <Col xs={12} md={6}>
                 <Form
-                  action="https://tinyletter.com/ProtectEarth"
+                  action="https://earth.us2.list-manage.com/subscribe/post?u=aea364fe5dd008072efb3b660&amp;id=53377e780a"
                   method="post"
-                  target="popupwindow"
-                  onSubmit={onMailingListSubmit}
+                  id="mc-embedded-subscribe-form"
+                  name="mc-embedded-subscribe-form"
+                  class="validate"
+                  target="_blank"
+                  novalidate
                 >
                   <Form.Group id="formBasicEmail">
-                    <Form.Label htmlFor="tlemail">Email address</Form.Label>
+                    <Form.Label htmlFor="mce-EMAIL">Email address</Form.Label>
                     <div style={{ display: 'flex', flexDirection: 'row' }}>
                       <Form.Control
-                        id="tlemail"
-                        name="email"
+                        id="mce-EMAIL"
+                        name="EMAIL"
                         type="email"
                         placeholder="Enter email"
                       />
-                      <input type="hidden" value="1" name="embed" />
-                      <Button type="submit" style={{ marginLeft: '0.5rem' }}>
+                      <div
+                        style={{ position: 'absolute', left: '-5000px' }}
+                        aria-hidden="true"
+                      >
+                        <input
+                          type="text"
+                          name="b_aea364fe5dd008072efb3b660_53377e780a"
+                          tabindex="-1"
+                          value=""
+                        ></input>
+                      </div>
+                      <Button
+                        type="submit"
+                        name="subscribe"
+                        id="mc-embedded-subscribe"
+                        style={{ marginLeft: '0.5rem' }}
+                      >
                         Subscribe
                       </Button>
                     </div>
