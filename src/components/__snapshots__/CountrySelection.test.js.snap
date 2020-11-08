@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CountrySelection renders correctly 1`] = `
+<div
+  className="change-country"
+>
+  <span
+    className="current selected-item"
+  >
+    United Kingdom
+     
+    🇬🇧
+  </span>
+   
+  <a
+    className="link text-white btn btn-primary"
+    href="/select-your-country"
+    onClick={[Function]}
+    onKeyDown={[Function]}
+  >
+    Change
+     country
+  </a>
+</div>
+`;
