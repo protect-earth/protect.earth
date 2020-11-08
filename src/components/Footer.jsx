@@ -9,7 +9,6 @@ import CountrySelection from './CountrySelection';
 // import { useCountry } from '../context/country-context';
 
 const Footer = () => {
-
   return (
     <footer
       className="bg-dark"
@@ -18,7 +17,12 @@ const Footer = () => {
       <Container>
         <Row noGutters>
           <Col xs={12} md={10} className="text-white">
-            <a href="/">&copy; {new Date().getFullYear()} - Protect.Earth</a>
+            <Button
+              href="https://airtable.com/shr9iNOeyFAAk8zqN"
+              target="_blank"
+            >
+              Submit more links
+            </Button>
 
             <div className="credits">
               Maintained by{' '}
@@ -46,23 +50,26 @@ const Footer = () => {
             </div>
           </Col>
           <Col xs={12} md={2} lg={2}>
-
             {/* Enable country selection, preview, and clearing. */}
             <CountrySelection />
 
+            <Row noGutters>
+              <a
+                href="https://www.netlify.com"
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                <img
+                  alt="Deploys by netlify"
+                  src="https://www.netlify.com/img/global/badges/netlify-light.svg"
+                />
+              </a>
+            </Row>
+
+            <Row noGutters>
+              <a href="/">&copy; {new Date().getFullYear()} - Protect.Earth</a>
+            </Row>
           </Col>
-        </Row>
-        <Row noGutters>
-          <a
-            href="https://www.netlify.com"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <img
-              alt="Deploys by netlify"
-              src="https://www.netlify.com/img/global/badges/netlify-light.svg"
-            />
-          </a>
         </Row>
       </Container>
     </footer>

@@ -2,7 +2,7 @@
   "name": "protect.earth",
   "private": true,
   "description": "",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "license": "MIT",
   "scripts": {
     "build": "GATSBY_EXPERIMENTAL_PAGE_BUILD_ON_DATA_CHANGES=true gatsby build",
@@ -19,12 +19,12 @@
     "gatsby": "^2.19.7",
     "gatsby-image": "^2.2.39",
     "gatsby-plugin-fathom": "^1.2.0",
-    "gatsby-plugin-netlify-cms": "^4.1.42",
     "gatsby-plugin-react-helmet": "^3.1.21",
     "gatsby-plugin-sass": "^2.1.27",
     "gatsby-plugin-sharp": "^2.4.0",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.1.42",
+    "gatsby-source-airtable": "^2.1.1",
     "gatsby-source-filesystem": "^2.1.46",
     "gatsby-transformer-remark": "^2.6.48",
     "gatsby-transformer-sharp": "^2.3.13",
@@ -32,7 +32,6 @@
     "i18n-iso-countries": "^6.0.0",
     "lodash": "^4.17.19",
     "markdown-to-jsx": "^6.10.3",
-    "netlify-cms-app": "^2.11.14",
     "node-sass": "^4.13.1",
     "normalize.css": "^8.0.1",
     "prop-types": "^15.7.2",
@@ -57,9 +56,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/philsturgeon/awesom.earth"
+    "url": "https://github.com/protect-earth/protect.earth"
   },
   "bugs": {
-    "url": "https://github.com/philsturgeon/awesom.earth/issues"
+    "url": "https://github.com/protect-earth/protect.earth/issues"
   }
 }

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import { Badge } from 'react-bootstrap';
 
 const shorten = (str, maxLen, separator = ' ') => {
@@ -17,7 +17,7 @@ export default ({ link }) => {
       <p className="h4">
         {link.title}
         {link.tags &&
-          link.tags.map(tag => {
+          link.tags.map((tag) => {
             return (
               <Badge
                 key={tag}
@@ -36,7 +36,7 @@ export default ({ link }) => {
             );
           })}
       </p>
-      <div> {shorten(link.description, 90)} </div>
+      <div> {link.description && shorten(link.description, 90)} </div>
     </a>
   );
 };

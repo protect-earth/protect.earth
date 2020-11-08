@@ -94,7 +94,7 @@ export default ({ data }) => {
               </ul>
             </Col>
             <Col xs={6}>
-              <RecentLinks links={data.allLinksYaml.nodes} showAmount={3} />
+              <RecentLinks links={data.allAirtable.nodes} showAmount={3} />
             </Col>
           </Row>
 
@@ -138,15 +138,20 @@ export const pageQuery = graphql`
         }
       }
     }
-    allLinksYaml {
+    allAirtable(
+      filter: { data: { status: { eq: "Completed" } } }
+      sort: { fields: [data___ID], order: ASC }
+    ) {
       nodes {
-        categories
-        countries
-        description
-        featured
-        title
-        url
-        tags
+        data {
+          categories
+          countries
+          description
+          featured
+          title
+          url
+          tags
+        }
       }
     }
   }

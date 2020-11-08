@@ -1,14 +1,20 @@
 # Contributing Guidelines
 
-This is a GatsbyJS site, on top of Netlify CMS for now, and powered by YAML files. It's easy to start hacking. All you need is to
+This is a GatsbyJS site, on using Airtable as a data source for the directory.
 
-1. Fork the repo
-1. `yarn` to fetch dependencies
-1. `yarn start` to spin up dev server on localhost:8000
-1. Update, commit, push to your fork. And open a pull request
+If you'd like to suggest links, you can do that through this [Airtable form](https://airtable.com/shr9iNOeyFAAk8zqN).
 
-Swing by `src/data/links/` to see all the links, and if you'd like to add a new one just copy and paste one of the older ones and update it.
+If you'd like to work on the codebase:
 
-We're working on rewriting this whole thing to Statamic, and that rewrite does an import of the YAML mentioned above, then converts it with `node convert.js`. Check out the `api/` directory for that, and the [Statamic v3 Beta Documentation](https://statamic.dev/).
+1. Fork the repo.
+2. `npm install` to fetch dependencies.
+3. copy `.env.template` file to `.env` in the same directory in which `.env.template` is stored.
+4. Enter environment variables for `.env` (ask phil@protect.earth / @philsturgeon).
+5. `npm run start` to spin up dev server on `localhost:8000`.
+6. Update, commit, push to your fork. And open a pull request!
 
-Things are a tad confusing at the moment, but swing by our issues or @philsturgeon on Twitter. We'll get it cleared up soon.
+This directory may well be moving to another home soon, so we're not putting a huge amount of effort into it at the moment. That said, if we get it good, it could be used as the basis for the new home, so reach out if you have ideas!
+
+# Deploying to production
+
+Ensure all the environment variable is set on production server. If service like Netlify, Render is used, the env variable can be in their web app.

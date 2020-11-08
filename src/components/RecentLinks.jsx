@@ -1,7 +1,4 @@
-import React, { Fragment } from 'react';
-
-import Col from 'react-bootstrap/Col';
-import Row from 'react-bootstrap/Row';
+import React from 'react';
 import RecentLinkItem from './RecentLinkItem';
 
 export default ({ links, showAmount }) => {
@@ -13,7 +10,7 @@ export default ({ links, showAmount }) => {
         <p className="h2"> Recent Links</p>
       </div>
       {recentLinks.map((link, index) => {
-        return <RecentLinkItem key={index} link={link} />;
+        return <RecentLinkItem key={index} link={link.data} />;
       })}
     </div>
   );
