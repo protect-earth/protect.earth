@@ -1,8 +1,6 @@
 {
   "editor.formatOnSave": true,
   "editor.formatOnPaste": true,
-  "cSpell.ignoreWords": [
-    "ecotricity",
-    "sunmills"
-  ]
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "cSpell.ignoreWords": ["ecotricity", "sunmills"]
 }
