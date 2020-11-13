@@ -1,0 +1,12 @@
+name: Build and Deploy to Netlify
+on:
+  schedule:
+    - cron: '0 2 * * *' # run at 2 AM UTC
+
+jobs:
+  nightly:
+    name: Nightly Build
+    runs-on: ubuntu-18.04
+    steps:
+      - name: Deploy to Netlify
+        run: curl -X POST -d {} https://api.netlify.com/build_hooks/5faea910597c1800f165859d
